@@ -1,22 +1,33 @@
 # L'Agent
 
-* L'Agent is an Open-Source license assistant able to answers questions about usage of a license. 
-* Why L'Agent
-  * Understanding legal documents is not easy. They are written by experts, for experts, using expert vocabulary.
-  * when used directly AI could not be trusted enough for legal advices
-* The solution
-  * L'Agent preprocesses licenses by generating all usage cases related to each license
-  * These use cases can be verified and fixed by a legal expert
-  * L'Agent chat uses only these certified usage cases to answer to user requests
-  * L'Agent write its asumptions about which license and which usage case is used to give the answer, so that the user is responsible for the shared understanding of the request, and the validity of the answer.
-* Chat workflow
+L'Agent is an Open-Source license assistant able to answers questions about usage of a license. 
+
+## Context
+  
+Understanding legal documents is not easy. They are written by experts, for experts, using expert vocabulary.
+  
+When used directly AI could not be trusted enough for legal advices.
+
+## Solution
+
+L'Agent preprocesses licenses by generating all usage cases related to each license, using a LLM with structured output.
+
+These use cases can be verified and fixed by a legal expert.
+
+L'Agent chat uses only these certified usage cases to answer to user requests.
+
+L'Agent write its asumptions about which license and which usage case is used to give the answer, so that the user is responsible for the shared understanding of the request, and the validity of the answer.
+
+
+![Architecture of L'Agent.](./assets/images/lagent_architecture.png)
+
+Chat workflow
   1. Initial question from the user
   2. L'Agent interact until the license is fully identified
   3. Then L'Agent interact until a usage case of this license matches the user usage case
   4. Then L'Agent provides the answer using this usage case
 
-![Architecture of L'Agent.](./assets/images/lagent_architecture.png)
-* L'Agent is preloaded with 32 open source software licenses for demonstration purpose.
+L'Agent is preloaded with 32 open source software licenses for demonstration purpose.
 
 # Install
 
@@ -56,19 +67,22 @@ python cli.py -h
 
 ## Chat app
 
-* Launch the Chat app
+Launch the Chat app
 ```sh
 python app.py -s
 ```
 
-* The Chat app has two tabs:
-  * The chat interface: you can chat about your usage of a specific license.
-    * For example, you can ask: 'Can I use GPL for personal use?'
-    * You must clear the chat history ("clear" button) to start a new conversation and reset the context from the previous one.
-    ![Chat tab of L'Agent.](./assets/images/lagent_chat.png)
-  * The license database: displays all the licenses supported by the chat.
-    * Select a license in the table to see its content and the list of usage cases.
-    ![Licenses tab of L'Agent.](./assets/images/lagent_licenses.png)
+The Chat app has two tabs:
+* The chat interface: you can chat about your usage of a specific license
+  * For example, you can ask: 'Can I use GPL for personal use?'
+  * You must clear the chat history ("clear" button) to start a new conversation and reset the context from the previous one.
+
+![Chat tab of L'Agent.](./assets/images/lagent_chat.png)
+
+* The license database: displays all the licenses supported by the chat.
+  * Select a license in the table to see its content and the list of usage cases.
+
+![Licenses tab of L'Agent.](./assets/images/lagent_licenses.png)
 
 ## CLI for preprocessing 
 
