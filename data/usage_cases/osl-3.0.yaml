@@ -1,0 +1,56 @@
+usage_cases:
+- allowed: true
+  conditions: The use must not infringe on the Licensor's trademarks, copyrights,
+    patents, or trade secrets.
+  description: The right to use the software for personal purposes.
+  title: Personal Use
+- allowed: true
+  conditions: The use must not infringe on the Licensor's trademarks, copyrights,
+    patents, or trade secrets.
+  description: The right to use the software for commercial purposes.
+  title: Commercial Use
+- allowed: true
+  conditions: The Source Code of any Derivative Works must retain all copyright, patent,
+    or trademark notices from the Source Code of the Original Work, as well as any
+    notices of licensing and any descriptive text identified therein as an 'Attribution
+    Notice'.
+  description: The right to modify the software.
+  title: Modification
+- allowed: true
+  conditions: Copies of Original Work or Derivative Works that are distributed must
+    be licensed under this Open Software License.
+  description: The right to distribute the software.
+  title: Distribution
+- allowed: true
+  conditions: Sublicenses must be granted under the terms of this Open Software License.
+  description: The right to sublicense the software.
+  title: Sublicensing
+- allowed: true
+  conditions: None
+  description: The right to perform the Original Work publicly.
+  title: Public Performance
+- allowed: true
+  conditions: None
+  description: The right to display the Original Work publicly.
+  title: Public Display
+- allowed: true
+  conditions: The use must be embodied in the Original Work as furnished by the Licensor.
+  description: The right to make, use, sell, offer for sale, have made, and import
+    the Original Work and Derivative Works under patent claims owned or controlled
+    by the Licensor.
+  title: Patent Use
+- allowed: true
+  conditions: The Licensor must provide a machine-readable copy of the Source Code
+    of the Original Work along with each copy of the Original Work that Licensor distributes.
+  description: The right to access the Source Code of the Original Work.
+  title: Source Code Access
+- allowed: false
+  conditions: None
+  description: The right to use the Licensor's trademarks.
+  title: Trademark Use
+- allowed: true
+  conditions: Any External Deployment must be treated as a distribution under section
+    1(c).
+  description: The right to use, distribute, or communicate the Original Work or Derivative
+    Works in any way such that they may be used by anyone other than You.
+  title: External Deployment

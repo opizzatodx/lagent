@@ -1,0 +1,33 @@
+usage_cases:
+- allowed: true
+  conditions: The Font Software must not be sold by itself.
+  description: The right to use the software for personal use
+  title: Personal Use
+- allowed: true
+  conditions: The Font Software can be bundled, embedded, redistributed and/or sold
+    with any software provided that any reserved names are not used by derivative
+    works.
+  description: The right to use the software for commercial use
+  title: Commercial Use
+- allowed: true
+  conditions: No Modified Version of the Font Software may use the Reserved Font Name(s)
+    unless explicit written permission is granted by the corresponding Copyright Holder.
+    The name(s) of the Copyright Holder(s) or the Author(s) of the Font Software shall
+    not be used to promote, endorse or advertise any Modified Version, except to acknowledge
+    the contribution(s) of the Copyright Holder(s) and the Author(s) or with their
+    explicit written permission.
+  description: The right to modify the software
+  title: Modification
+- allowed: true
+  conditions: Each copy must contain the copyright notice and this license. These
+    can be included either as stand-alone text files, human-readable headers or in
+    the appropriate machine-readable metadata fields within text or binary files as
+    long as those fields can be easily viewed by the user. The Font Software, modified
+    or unmodified, in part or in whole, must be distributed entirely under this license,
+    and must not be distributed under any other license.
+  description: The right to distribute the software
+  title: Distribution
+- allowed: false
+  conditions: ''
+  description: The right to sublicense the software
+  title: Sublicensing

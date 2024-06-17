@@ -1,0 +1,60 @@
+usage_cases:
+- allowed: true
+  conditions: The act of running the Program is not restricted.
+  description: The right to use the software for personal purposes.
+  title: Personal Use
+- allowed: true
+  conditions: You may charge a fee for the physical act of transferring a copy, and
+    you may at your option offer warranty protection in exchange for a fee.
+  description: The right to use the software for commercial purposes.
+  title: Commercial Use
+- allowed: true
+  conditions: You must cause the modified files to carry prominent notices stating
+    that you changed the files and the date of any change. You must cause any work
+    that you distribute or publish, that in whole or in part contains or is derived
+    from the Program or any part thereof, to be licensed as a whole at no charge to
+    all third parties under the terms of this License. If the modified program normally
+    reads commands interactively when run, you must cause it, when started running
+    for such interactive use in the most ordinary way, to print or display an announcement
+    including an appropriate copyright notice and a notice that there is no warranty
+    and that users may redistribute the program under these conditions, and telling
+    the user how to view a copy of this License.
+  description: The right to modify the software.
+  title: Modification
+- allowed: true
+  conditions: You must conspicuously and appropriately publish on each copy an appropriate
+    copyright notice and disclaimer of warranty; keep intact all the notices that
+    refer to this License and to the absence of any warranty; and give any other recipients
+    of the Program a copy of this License along with the Program.
+  description: The right to distribute verbatim copies of the software.
+  title: Distribution
+- allowed: false
+  conditions: You may not sublicense the Program except as expressly provided under
+    this License.
+  description: The right to sublicense the software.
+  title: Sublicensing
+- allowed: true
+  conditions: You must meet all the conditions of Section 1 and Section 2 of the License.
+  description: The right to distribute modifications or work based on the Program.
+  title: Distribution of Modified Work
+- allowed: true
+  conditions: You must accompany it with the complete corresponding machine-readable
+    source code, or a written offer to give any third party a complete machine-readable
+    copy of the corresponding source code, or the information you received as to the
+    offer to distribute corresponding source code. This alternative is allowed only
+    for noncommercial distribution and only if you received the program in object
+    code or executable form with such an offer.
+  description: The right to distribute the Program in object code or executable form.
+  title: Distribution of Object Code
+- allowed: false
+  conditions: If you cannot distribute so as to satisfy simultaneously your obligations
+    under this License and any other pertinent obligations, then as a consequence
+    you may not distribute the Program at all.
+  description: The right to distribute the Program under patent restrictions.
+  title: Distribution under Patent Restrictions
+- allowed: true
+  conditions: The original copyright holder who places the Program under this License
+    may add an explicit geographical distribution limitation excluding those countries,
+    so that distribution is permitted only in or among countries not thus excluded.
+  description: The right to distribute the Program with geographical limitations.
+  title: Distribution with Geographical Limitations

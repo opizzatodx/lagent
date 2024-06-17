@@ -1,0 +1,52 @@
+usage_cases:
+- allowed: true
+  conditions: The user must comply with all terms and conditions of the Mozilla Public
+    License Version 2.0.
+  description: The right to use the software for personal, non-commercial purposes.
+  title: Personal Use
+- allowed: true
+  conditions: The user must comply with all terms and conditions of the Mozilla Public
+    License Version 2.0.
+  description: The right to use the software for commercial purposes.
+  title: Commercial Use
+- allowed: true
+  conditions: The user must comply with all terms and conditions of the Mozilla Public
+    License Version 2.0, including the distribution of the modified software under
+    the same license.
+  description: The right to modify the software.
+  title: Software Modification
+- allowed: true
+  conditions: The user must comply with all terms and conditions of the Mozilla Public
+    License Version 2.0, including the distribution of the software under the same
+    license and providing the source code form of the software.
+  description: The right to distribute the software, including modified versions.
+  title: Software Distribution
+- allowed: true
+  conditions: "The user must comply with all terms and conditions of the Mozilla Public\
+    \ License Version 2.0, and the sublicense must not attempt to limit or alter the\
+    \ recipients\u2019 rights in the Source Code Form under this License."
+  description: The right to sublicense the software.
+  title: Sublicensing
+- allowed: true
+  conditions: The user must comply with all terms and conditions of the Mozilla Public
+    License Version 2.0, and the patent claims are only granted for the contributors'
+    contributions and not for any other parts of the software.
+  description: The right to use the software without infringing on the patent claims
+    of the contributors.
+  title: Patent Claims
+- allowed: true
+  conditions: The user must comply with all terms and conditions of the Mozilla Public
+    License Version 2.0 for the covered software, and the larger work can be distributed
+    under terms of the user's choice.
+  description: The right to create and distribute a larger work that combines the
+    covered software with other material.
+  title: Larger Work Creation
+- allowed: true
+  conditions: The user must make it clear that any such warranty, support, indemnity,
+    or liability obligation is offered by the user alone, and the user must agree
+    to indemnify every Contributor for any liability incurred by such Contributor
+    as a result of warranty, support, indemnity or liability terms offered by the
+    user.
+  description: The right to offer and charge a fee for warranty, support, indemnity
+    or liability obligations to one or more recipients of Covered Software.
+  title: Additional Terms Application

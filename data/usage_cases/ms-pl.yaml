@@ -1,0 +1,36 @@
+usage_cases:
+- allowed: true
+  conditions: Acceptance of the license terms and conditions.
+  description: The right to use the software for personal, non-commercial purposes.
+  title: Use of the Software for Personal Use
+- allowed: true
+  conditions: Acceptance of the license terms and conditions.
+  description: The right to use the software for commercial purposes.
+  title: Use of the Software for Commercial Use
+- allowed: true
+  conditions: Acceptance of the license terms and conditions, retaining all copyright,
+    patent, trademark, and attribution notices present in the software, and distribution
+    of the modified software only under this license.
+  description: The right to modify the software and create derivative works.
+  title: Modification of the Software
+- allowed: true
+  conditions: Acceptance of the license terms and conditions, retaining all copyright,
+    patent, trademark, and attribution notices present in the software, and distribution
+    of the software only under a license that complies with this license.
+  description: The right to distribute the software or derivative works.
+  title: Distribution of the Software
+- allowed: false
+  conditions: Not applicable as sublicensing is not allowed.
+  description: The right to grant further licenses (sublicenses) of the software.
+  title: Sublicensing of the Software
+- allowed: false
+  conditions: "Not applicable as this license does not grant rights to use any contributors\u2019\
+    \ name, logo, or trademarks."
+  description: The right to use any contributor's name, logo, or trademarks.
+  title: Use of Contributor's Trademark
+- allowed: false
+  conditions: If you bring a patent claim against any contributor, your patent license
+    from such contributor to the software ends automatically.
+  description: The right to bring a patent claim against any contributor over patents
+    that you claim are infringed by the software.
+  title: Patent Claim Against Contributor
