@@ -65,8 +65,10 @@ python app.py -s
   * The chat interface: you can chat about your usage of a specific license.
     * For example, you can ask: 'Can I use GPL for personal use?'
     * You must clear the chat history ("clear" button) to start a new conversation and reset the context from the previous one.
+    ![Chat tab of L'Agent.](./assets/images/lagent_chat.png)
   * The license database: displays all the licenses supported by the chat.
     * Select a license in the table to see its content and the list of usage cases.
+    ![Licenses tab of L'Agent.](./assets/images/lagent_licenses.png)
 
 ## CLI for preprocessing 
 
