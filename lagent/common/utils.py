@@ -45,5 +45,5 @@ def load_text_file_lines(file_path):
         logger.error(f"file {file_path} does not exist.")
         return None
 
-    with open(file_path, "r") as file:
+    with open(file_path, "r", encoding='utf-8') as file:
         return file.readlines()
