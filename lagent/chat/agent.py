@@ -31,37 +31,26 @@ class LicenseAgent():
         self.output_parser = StrOutputParser()
         self.chat_history = ChatMessageHistory()
 
-        # build chain for license matching
-        license_chain = license_prompt | self.llm | self.output_parser
-        self.license_chain_with_message_history = RunnableWithMessageHistory(
-            license_chain,
-            lambda session_id: self.chat_history,
-            input_messages_key="input",
-            history_messages_key="chat_history",
-        )
-
-        # build chain for usage matching
-        usage_chain = usage_prompt | self.llm | self.output_parser
-        self.usage_chain_with_message_history = RunnableWithMessageHistory(
-            usage_chain,
-            lambda session_id: self.chat_history,
-            input_messages_key="input",
-            history_messages_key="chat_history",
-        )
-
-        # build chain for usage matching
-        response_chain = response_prompt | self.llm | self.output_parser
-        self.response_chain_with_message_history = RunnableWithMessageHistory(
-            response_chain,
-            lambda session_id: self.chat_history,
-            input_messages_key="input",
-            history_messages_key="chat_history",
-        )
+        self.license_chain = self.build_chain_from_prompt(license_prompt)
+        self.usage_chain = self.build_chain_from_prompt(usage_prompt)
+        self.response_chain = self.build_chain_from_prompt(response_prompt)
 
         # get the license list
         self.license_names = [item["name"] for item in self.licenses_data.values()]
 
+    def build_chain_from_prompt(self, prompt):
+
+        chain = prompt | self.llm | self.output_parser
+        chain_with_message_history = RunnableWithMessageHistory(
+            chain,
+            lambda session_id: self.chat_history,
+            input_messages_key="input",
+            history_messages_key="chat_history",
+        )
+        return chain_with_message_history
+
     def clear_history(self):
+
         self.chat_history.clear()
         self.user_license_tag = None
         self.user_license_name = None
@@ -82,13 +71,22 @@ class LicenseAgent():
 
         return self.chat_for_response(message)
 
-    def chat_for_matching_the_license(self, message):
+    def clear_history_from_last_ai_result_and_pop_last_human_input(self):
+            
+        # remove the last message, supposed to be the AI message
+        self.chat_history.messages = self.chat_history.messages[:-1]
+
+        # pop the next last message, supposed to be the last human input
+        initial_human_input = self.chat_history.messages[-1].content
+        self.chat_history.messages = self.chat_history.messages[:-1]
+
+        return initial_human_input
+
+    def chat_for_matching_the_license(self, user_input):
 
         logger.info(f"entering LICENSE chat")
-        user_input = message
-
         try:
-            res = self.license_chain_with_message_history.invoke(
+            res = self.license_chain.invoke(
                 {"input": user_input, "license_database": ", ".join(self.license_names)},
                 {"configurable": {"session_id": "unused"}},
             )
@@ -98,11 +96,13 @@ class LicenseAgent():
 
         logger.info(f"license chain response: {res}")
 
+        # find the line with the final answer from the LLM response
         final_answer_line = find_a_line_starting_with(res.split("\n"), "Final Answer:")
         if final_answer_line is None:
+            # no final answer found, return the response as is
             return res
 
-        # license name found
+        # extract the license name from the LLM response
         license_name = final_answer_line.replace("Final Answer: ", "").strip()
         logger.info(f"License {license_name=} in final answer")
 
@@ -112,90 +112,76 @@ class LicenseAgent():
             logger.error(f"{license_name=} not found in the database. {self.license_names=}")
             return res
 
+        # update the agent state with the license and its usage cases
         matching_license = matching_licenses[0]
         self.user_license_tag = matching_license["tag"]
         self.user_license_name = license_name
-        logger.info(f"License {license_name} found in the database with tag: {self.user_license_tag}")
+        self.user_license_usage_cases = self.licenses_data[self.user_license_tag]["usage_cases"]
+        logger.info(f"License {license_name} found in the database: {self.user_license_tag=}, {len(self.user_license_usage_cases)=}")
 
-        # get usage cases for the license
-        cases = self.licenses_data[self.user_license_tag]["usage_cases"]
-        logger.info(f"found {len(cases)} usage cases for license {license_name} with tag {self.user_license_tag}")
-        self.user_license_usage_cases = cases
-
-        # remove last AI message which is the result of use case matching
-        # and get the last human message to use as human input
-        previous_history = self.chat_history.messages
-        previous_history = previous_history[:-1]
-        initial_human_input = previous_history[-1].content
-        previous_history = previous_history[:-1]
-        self.chat_history.messages = previous_history
-
-        res = self.chat_for_matching_the_use_case(initial_human_input)
+        # reset history to previous conversation and call the next chat
+        human_input = self.clear_history_from_last_ai_result_and_pop_last_human_input()
+        res = self.chat_for_matching_the_use_case(human_input)
         return res
 
-    def chat_for_matching_the_use_case(self, message):
+    def chat_for_matching_the_use_case(self, user_input):
 
         logger.info(f"entering USAGE chat for license {self.user_license_tag}")
 
-        user_input = message
-        reponse_prefix = f"""
+        response_prefix = f"""
         I understand you are asking about the license: {self.user_license_name}.
         """
 
         cases = [item["description"] for item in self.user_license_usage_cases]
-        res = self.usage_chain_with_message_history.invoke(
+
+        res = self.usage_chain.invoke(
             {"input": user_input, "usages_database": " | ".join(cases)},
             {"configurable": {"session_id": "unused"}},
         )
         logger.info(f"usage chain response: {res}")
 
-        last_answer = res.split("\n")[-1].strip()
-        if "Final Answer:" not in last_answer:
-            return reponse_prefix + res
+        # find the line with the final answer from the LLM response
+        final_answer_line = find_a_line_starting_with(res.split("\n"), "Final Answer:")
+        if final_answer_line is None:
+            # no final answer found, return the response as is
+            return response_prefix + res
 
-        usage_case = last_answer.replace("Final Answer: ", "").strip()
+        usage_case = final_answer_line.replace("Final Answer: ", "").strip()
 
         # get the usage case
         matching_cases = [item for item in self.user_license_usage_cases if item["description"] in usage_case]
         if len(matching_cases) == 0:
             logger.error(f"Usage case {usage_case} not found in the database.")
-            print("cases:")
+            logger.info("usage cases available for this license:")
             for c in self.user_license_usage_cases:
-                print(c)
-            res = f"TECHNICAL ERROR: Usage case {usage_case=} not found in the database."
-            return reponse_prefix + res
+                logger.info(f"{c['description']}")
+            res = f"TECHNICAL ERROR: Usage case '{usage_case}' not found in the license database."
+            return response_prefix + res
 
+        # update the agent state with the usage case
         matching_case = matching_cases[0]
-        logger.info(f"Usage case {usage_case} found in the database")
         self.user_usage_case = matching_case
+        logger.info(f"Usage case {usage_case} found in the database")
 
-        # remove last AI message which is the result of use case matching
-        # and get the last human message to use as human input
-        previous_history = self.chat_history.messages
-        previous_history = previous_history[:-1]
-        initial_human_input = previous_history[-1].content
-        previous_history = previous_history[:-1]
-        self.chat_history.messages = previous_history
-
-        res = self.chat_for_response(initial_human_input)
+        # reset history to previous conversation and call the next chat
+        human_input = self.clear_history_from_last_ai_result_and_pop_last_human_input()
+        res = self.chat_for_response(human_input)
         return res
 
-    def chat_for_response(self, message):
+    def chat_for_response(self, user_input):
 
-        logger.info(f"entering RESPONSE chat for license {self.user_license_tag=} and usage case {self.user_usage_case=}")
+        logger.info(f"entering RESPONSE chat for {self.user_license_tag=} and {self.user_usage_case=}")
 
-        user_input = message
-
-        reponse_prefix = f"""
+        response_prefix = f"""
         I understand you are asking about the license: {self.user_license_name}.
         I understand your usage case is related to: {self.user_usage_case['description']}
         """
 
-        res = self.response_chain_with_message_history.invoke(
+        res = self.response_chain.invoke(
             {"input": user_input, "license_usage_case": f"{self.user_usage_case}"},
             {"configurable": {"session_id": ""}},
         )
         logger.info(f"response chain response: {res}")
 
-        return reponse_prefix + res
+        return response_prefix + res
 
