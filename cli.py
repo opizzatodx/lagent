@@ -1,6 +1,6 @@
 import logging
 from dotenv import load_dotenv
-from lagent.licenses.licenses import LicensesProcessor
+from lagent.licenses.licenses import LicenseProcessor
 
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
@@ -21,7 +21,7 @@ def main(args):
 
     logger.info(f"{args=}")
 
-    licenses_processor = LicensesProcessor(
+    licenses_processor = LicenseProcessor(
         licenses_and_link_file_path="./data/licenses_and_link.yaml", 
         licenses_text_dir="./data/licenses_text", 
         licenses_usage_cases_dir="./data/usage_cases"

@@ -1,14 +1,26 @@
 import logging
 import os
+from typing import List
 from langchain_nvidia_ai_endpoints import ChatNVIDIA
+from pydantic import BaseModel, Field, ValidationError
+from langchain_core.pydantic_v1 import ValidationError as V1ValidationError
 
-from lagent.common.utils import check_data_format_as_list_of_dicts_with_keys, load_text_file_lines, read_yaml_file, write_yaml_file
-from lagent.licenses.usage import prompt, parser
+from lagent.common.utils import load_text_file_lines, read_yaml_file, write_yaml_file
+from lagent.licenses.usage import prompt, parser, UsageCases
 
 logger = logging.getLogger(__name__)
 
 
-class LicensesProcessor():
+class LicenseAndLink(BaseModel):
+    tag: str = Field(description="the title of the usage case")
+    name: str = Field(description="the description of the usage case")
+    link: str = Field(description="the statement that the usage case is allowed with or without conditions (true) or not allowed (false)")
+
+class LicensesAndLink(BaseModel):
+    licenses_and_link: List[LicenseAndLink]
+
+
+class LicenseProcessor():
 
     def __init__(self, licenses_and_link_file_path, licenses_text_dir, licenses_usage_cases_dir):
 
@@ -30,13 +42,14 @@ class LicensesProcessor():
             return None
 
         logger.info(f"read licenses file {self.licenses_and_link_file_path=}, {len(data)=}")
-        keys = ["tag", "name"]
-        res, error = check_data_format_as_list_of_dicts_with_keys(data, keys, log_prefix=f"read ${self.licenses_and_link_file_path}: ")
-        if not res:
-            logger.error(f"error reading licenses file, {error=}")
+
+        try:
+            licenses = LicensesAndLink.model_validate(data).model_dump()["licenses_and_link"]
+        except ValidationError as error:
+            logger.error(f"error parsing licenses file content, {error=}")
             return None
-        
-        return data
+
+        return licenses
     
     def read_license_text(self, license_tag):
         file_path = os.path.join(self.licenses_text_dir, license_tag + ".txt")
@@ -70,17 +83,23 @@ class LicensesProcessor():
     def read_license_usage_cases(self, license_tag):
 
         file_path = os.path.join(self.licenses_usage_cases_dir, license_tag + ".yaml")
+
+        log_prefix = f"read usage cases file ${file_path}, "
+
         data = read_yaml_file(file_path=file_path, skip_root_tag="usage_cases")
         if (data is None):
-            logger.error(f"error reading license usage cases file {file_path=}")
+            logger.error(log_prefix + f"error reading file")
             return None
-        logger.info(f"read license usage cases file {file_path=}, {len(data)=}")
-        keys = ["title", "description", "allowed", "conditions"]
-        res, error = check_data_format_as_list_of_dicts_with_keys(data, keys, log_prefix=f"read ${file_path}: ")
-        if not res:
-            logger.error(f"error reading license usage cases file, {error=}")
+        logger.info(log_prefix + f"{len(data)=}")
+
+        try:
+            # pydantic_v1 validation (because this object is defined for LangChain PydanticOutputParser)
+            cases = UsageCases.validate({"usage_cases": data}).dict()["usage_cases"]
+        except V1ValidationError as error:
+            logger.error(log_prefix + f"error parsing file content, {error=}")
             return None
-        return data
+
+        return cases
 
     def save_license_usage_cases(self, license_tag, license_usage_cases):
 

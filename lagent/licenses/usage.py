@@ -1,6 +1,8 @@
 import logging
 from typing import List
 from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import PydanticOutputParser
+from langchain_core.pydantic_v1 import BaseModel, Field
 
 
 logger = logging.getLogger(__name__)
@@ -36,9 +38,6 @@ Answer the user query. Wrap the output in `json` tags. Output only the list of u
 {format_instructions}
 
 """
-
-from langchain_core.output_parsers import PydanticOutputParser
-from langchain_core.pydantic_v1 import BaseModel, Field
 
 class UsageCase(BaseModel):
     title: str = Field(description="the title of the usage case")
