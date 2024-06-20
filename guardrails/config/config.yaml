@@ -13,7 +13,7 @@ prompts:
       Your task is to check if the bot message is consistent with the license name and the use case description.
 
       The bot message:
-      - should mention the license name with its exact version and not any another license of version
+      - should mention the license name with its exact version and not any another license or version
       - should comply with the use case, in particular if the use case is allowed or not
 
       License name: "{{ license_name }}"
