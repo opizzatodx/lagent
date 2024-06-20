@@ -6,9 +6,6 @@ from dotenv import load_dotenv
 from lagent.chat.agent import Agent
 from lagent.licenses.licenses import LicenseProcessor
 
-# https://github.com/langchain-ai/langchain/discussions/21596
-logging.getLogger("langchain_core.tracers.core").setLevel(logging.ERROR)
-
 load_dotenv()
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)

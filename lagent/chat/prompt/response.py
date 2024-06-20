@@ -5,7 +5,15 @@ from langchain_core.prompts import ChatPromptTemplate
 logger = logging.getLogger(__name__)
 
 prompt_template = """
-You are a juridic assistant helping to answer to the user request with the LICENSE USE CASE defined below.
+You are a juridic assistant helping to answer to the user request about a LICENSE with the LICENSE USE CASE defined below.
+
+Below is the license the user is talking about.
+
+=== BEGIN LICENSE USE CASE ===
+
+{license}
+
+=== END LICENSE USE CASE ===
 
 Below is the license use case for answering the user request.
 

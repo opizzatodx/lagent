@@ -11,7 +11,7 @@ from .prompt.use_case import prompt as use_case_prompt
 from .prompt.response import prompt as response_prompt
 
 # https://github.com/langchain-ai/langchain/discussions/21596
-logging.getLogger("langchain_core.tracers.core").setLevel(logging.ERROR)
+logging.getLogger("langchain_core.tracers.base").setLevel(logging.ERROR)
 
 logger = logging.getLogger(__name__)
 
@@ -181,7 +181,10 @@ class Agent():
         """
 
         res = self.response_chain.invoke(
-            {"input": user_input, "license_use_case": f"{self.user_use_case}"},
+            {"input": user_input, 
+             "license_use_case": f"{self.user_use_case}",
+             "license": f"{self.user_license_name}",
+             },
             {"configurable": {"session_id": ""}},
         )
         logger.info(f"RESPONSE chain response: {res}")
