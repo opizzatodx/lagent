@@ -1,0 +1,24 @@
+models:
+  - type: main
+    engine: nvidia_ai_endpoints
+    model: mistralai/mixtral-8x22b-instruct-v0.1
+
+rails:
+  output:
+    flows:
+      - self check output
+prompts:
+  - task: self_check_output
+    content: |
+      Your task is to check if the bot message is consistent with the license name and the use case description.
+
+      The bot message:
+      - should mention the license name with its exact version and not any another license of version
+      - should comply with the use case, in particular if the use case is allowed or not
+
+      License name: "{{ license_name }}"
+      Use case: "{{ use_case }}"
+      Bot message: "{{ bot_response }}"
+
+      Question: Should the message be blocked (Yes or No)?
+      Answer:

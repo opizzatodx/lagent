@@ -4,6 +4,8 @@ from langchain_nvidia_ai_endpoints import ChatNVIDIA
 from langchain_community.chat_message_histories import ChatMessageHistory
 from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_core.output_parsers import StrOutputParser
+from nemoguardrails.integrations.langchain.runnable_rails import RunnableRails
+from nemoguardrails import RailsConfig
 
 from lagent.common.utils import find_a_line_starting_with
 from .prompt.license import prompt as license_prompt
@@ -34,16 +36,27 @@ class Agent():
         self.output_parser = StrOutputParser()
         self.chat_history = ChatMessageHistory()
 
+        # chain for the license and use_case stages
         self.license_chain = self.build_chain_from_prompt(license_prompt)
         self.use_case_chain = self.build_chain_from_prompt(use_case_prompt)
-        self.response_chain = self.build_chain_from_prompt(response_prompt)
+
+        # chain for the response stage, with guardrails for verifying consistency of llm answer with license and use case
+        config = RailsConfig.from_path("./guardrails/config")
+        guardrails = RunnableRails(config)
+        guardrails.rails.register_prompt_context("license_name", lambda: self.user_license_name)
+        guardrails.rails.register_prompt_context("use_case", lambda: self.user_use_case)
+        self.response_chain = self.build_chain_from_prompt(response_prompt, guardrails=guardrails)
 
         # get the license list
         self.license_names = [item["name"] for item in self.licenses_data.values()]
 
-    def build_chain_from_prompt(self, prompt):
+    def build_chain_from_prompt(self, prompt, guardrails=None):
 
-        chain = prompt | self.llm | self.output_parser
+        if guardrails is not None:
+            chain = prompt | (guardrails | self.llm) | self.output_parser
+        else:
+            chain = prompt | self.llm | self.output_parser
+
         chain_with_message_history = RunnableWithMessageHistory(
             chain,
             lambda session_id: self.chat_history,
