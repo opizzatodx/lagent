@@ -62,6 +62,8 @@ def main(args):
                 if len(licenses) == 0:
                     logger.error(f"license tag not found: {args.license_tag}")
                     return
+            elif not args.all:
+                return
 
             for license in licenses:
                 tag = license["tag"]
@@ -73,7 +75,7 @@ def main(args):
         licenses_data = license_processor.read_licences_database()
         if licenses_data is None:
             logger.error("error reading licenses database")
-            return False
+            return
 
         agent = Agent(licenses_data)
         while True:
