@@ -76,7 +76,16 @@ def main(args):
             return False
 
         agent = Agent(licenses_data)
-        while args.query != "quit":
+        while True:
+
+            if args.query == "quit":
+                break
+
+            if args.query == "clear":
+                agent.clear_history()
+                args.query = input("Your query: ")
+                continue
+
             res = agent.chat_for_matching_the_license(args.query)
             print(res)
             args.query = input("Your query: ")

@@ -1,6 +1,8 @@
-python-dotenv
-pandas
-gradio
-langchain_nvidia_ai_endpoints
-langchain_community
-langchain_core
+python-dotenv==1.0.1
+pandas==2.2.2
+gradio==4.36.1
+langchain-community==0.0.38
+langchain-core==0.1.52
+langchain-nvidia-ai-endpoints==0.1.2
+nemoguardrails==0.9.0
+pydantic==2.7.4
