@@ -23,8 +23,8 @@ def parse_args():
 def create_licenses_dataframe(licenses_data):
     data = []
     for tag, item in licenses_data.items():
-        data.append([tag, item["name"], len(item["text"]), len(item["usage_cases"])])
-    df = pd.DataFrame(data, columns=["tag", "name", "content length", "number of usage cases"])
+        data.append([tag, item["name"], len(item["text"]), len(item["use_cases"])])
+    df = pd.DataFrame(data, columns=["tag", "name", "content length", "number of use cases"])
     df = df.sort_values(by="tag", ascending=True)
     return df
 
@@ -36,7 +36,7 @@ class App:
         self.license_agent = license_agent
 
         self.licenses_df = create_licenses_dataframe(self.licenses_data)
-        self.usage_cases_table_columns = ["allowed", "title", "description", "conditions"]
+        self.use_cases_table_columns = ["allowed", "title", "description", "conditions"]
 
     # chat callback function
     def chat(self, message, history):    
@@ -54,10 +54,10 @@ class App:
         # get the license content
         license_content = self.licenses_data[tag]["text"]
 
-        # get the usage cases as dataframe
-        license_usage_cases = self.licenses_data[tag]["usage_cases"]
-        df = pd.DataFrame(license_usage_cases)
-        df = df[self.usage_cases_table_columns]
+        # get the use cases as dataframe
+        license_use_cases = self.licenses_data[tag]["use_cases"]
+        df = pd.DataFrame(license_use_cases)
+        df = df[self.use_cases_table_columns]
 
         return [license_content, df]
 
@@ -66,7 +66,7 @@ class App:
         chatbot = gr.Chatbot(elem_id="chatbot", height=600)
         with gr.Blocks() as chat_blocks:
             gr.Markdown("""
-                Chat about your usage of a __specific license__. For example, you can ask: 'Can I use GPL for personal use?'\n
+                Chat about your use of a __specific license__. For example, you can ask: 'Can I use GPL for personal use?'\n
                 __Clear the chat history__ to start a new conversation. 
             """)
             gr.ChatInterface(
@@ -78,15 +78,15 @@ class App:
 
         with gr.Blocks() as license_blocks:
             gr.Markdown("""
-                Licenses supported by the chat. __Select a license__ in the table below to see its content and the list of usage cases.\n
+                Licenses supported by the chat. __Select a license__ in the table below to see its content and the list of use cases.\n
             """)
             with gr.Row():
                 licenses_table = gr.Dataframe(value=self.licenses_df)
             with gr.Row():
                 license_content = gr.Textbox(label="License content")
-                usage_cases_table = gr.Dataframe(label="Usage cases", value=pd.DataFrame(columns=self.usage_cases_table_columns))
+                use_cases_table = gr.Dataframe(label="Use cases", value=pd.DataFrame(columns=self.use_cases_table_columns))
 
-            licenses_table.select(self.on_select_a_license, None, [license_content, usage_cases_table])
+            licenses_table.select(self.on_select_a_license, None, [license_content, use_cases_table])
 
         app = gr.TabbedInterface([chat_blocks, license_blocks], ["Chat", "Licenses"])
         app.launch(share=share)
@@ -97,7 +97,7 @@ def main(args):
     license_processor = LicenseProcessor(
         licenses_and_link_file_path="./data/licenses_and_link.yaml", 
         licenses_text_dir="./data/licenses_text", 
-        licenses_usage_cases_dir="./data/usage_cases"
+        licenses_use_cases_dir="./data/use_cases"
     )
     licenses_data = license_processor.read_licences_database()
     if licenses_data is None:

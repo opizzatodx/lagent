@@ -1,0 +1,58 @@
+use_cases:
+- allowed: true
+  conditions: The act of running a program using the Library is not restricted.
+  description: The right to use the software for personal use
+  title: Personal Use
+- allowed: true
+  conditions: You may charge a fee for the physical act of transferring a copy, and
+    you may at your option offer warranty protection in exchange for a fee.
+  description: The right to use the software for commercial use
+  title: Commercial Use
+- allowed: true
+  conditions: You may modify your copy or copies of the Library or any portion of
+    it, thus forming a work based on the Library, and copy and distribute such modifications
+    or work under the terms of Section 1 above, provided that you also meet all of
+    the conditions in Section 2.
+  description: The right to modify the software
+  title: Modification
+- allowed: true
+  conditions: You may copy and distribute verbatim copies of the Library's complete
+    source code as you receive it, in any medium, provided that you conspicuously
+    and appropriately publish on each copy an appropriate copyright notice and disclaimer
+    of warranty; keep intact all the notices that refer to this License and to the
+    absence of any warranty; and distribute a copy of this License along with the
+    Library.
+  description: The right to distribute the software
+  title: Distribution
+- allowed: false
+  conditions: You may not sublicense the Library except as expressly provided under
+    this License.
+  description: The right to sublicense the software
+  title: Sublicensing
+- allowed: true
+  conditions: You may also combine or link a 'work that uses the Library' with the
+    Library to produce a work containing portions of the Library, and distribute that
+    work under terms of your choice, provided that the terms permit modification of
+    the work for the customer's own use and reverse engineering for debugging such
+    modifications.
+  description: The right to link the library with non-free programs
+  title: Linking with Non-Free Programs
+- allowed: true
+  conditions: You may distribute a modified version of the library under the terms
+    of Section 1 and 2, provided that you also meet all of the conditions in Section
+    2.
+  description: The right to distribute a modified version of the library
+  title: Distribution of Modified Work
+- allowed: true
+  conditions: You may copy and distribute the Library in object code or executable
+    form under the terms of Sections 1 and 2 above provided that you accompany it
+    with the complete corresponding machine-readable source code, which must be distributed
+    under the terms of Sections 1 and 2 above on a medium customarily used for software
+    interchange.
+  description: The right to distribute the Library in object code or executable form
+  title: Distribution of Object Code
+- allowed: true
+  conditions: Any patent license obtained for a version of the library must be consistent
+    with the full freedom of use specified in this license.
+  description: The right to obtain a patent license for a version of the library
+  title: Patent License

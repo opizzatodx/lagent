@@ -1,0 +1,26 @@
+use_cases:
+- allowed: true
+  conditions: No conditions applied.
+  description: The right to use the software for personal purposes.
+  title: Personal Use
+- allowed: true
+  conditions: No conditions applied.
+  description: The right to use the software for commercial purposes.
+  title: Commercial Use
+- allowed: true
+  conditions: No conditions applied.
+  description: The right to modify the software.
+  title: Software Modification
+- allowed: true
+  conditions: No conditions applied.
+  description: The right to distribute verbatim or modified copies of the software.
+  title: Software Distribution
+- allowed: true
+  conditions: No conditions applied.
+  description: The right to sublicense the software.
+  title: Sublicensing
+- allowed: true
+  conditions: Changing the license document is allowed as long as the name is changed.
+  description: The right to copy and distribute verbatim or modified copies of the
+    license document.
+  title: License Document Copying and Distribution

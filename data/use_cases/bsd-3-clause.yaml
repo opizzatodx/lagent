@@ -1,0 +1,32 @@
+use_cases:
+- allowed: true
+  conditions: The software is provided 'as is', with all implied warranties disclaimed
+    and no liability for any damages caused by the use of the software.
+  description: The right to use the software for personal, non-commercial purposes.
+  title: Use of the Software for Personal Use
+- allowed: true
+  conditions: The software is provided 'as is', with all implied warranties disclaimed
+    and no liability for any damages caused by the use of the software.
+  description: The right to use the software for commercial purposes.
+  title: Use of the Software for Commercial Use
+- allowed: true
+  conditions: Redistributions of source code must retain the copyright notice, this
+    list of conditions and the disclaimer.
+  description: The right to modify the source code of the software.
+  title: Modification of the Software
+- allowed: true
+  conditions: Redistributions of source code must retain the copyright notice, this
+    list of conditions and the disclaimer. Redistributions in binary form must reproduce
+    the copyright notice, this list of conditions and the disclaimer in the documentation
+    and/or other materials provided with the distribution.
+  description: The right to distribute the software in source and binary forms.
+  title: Distribution of the Software
+- allowed: false
+  conditions: ''
+  description: The right to sublicense the software to third parties.
+  title: Sublicensing of the Software
+- allowed: false
+  conditions: Specific prior written permission is required.
+  description: The right to use the name of the copyright holder or its contributors
+    to endorse or promote products derived from this software.
+  title: Use of Copyright Holder's Name for Endorsement

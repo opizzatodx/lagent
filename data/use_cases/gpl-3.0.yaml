@@ -1,0 +1,75 @@
+use_cases:
+- allowed: true
+  conditions: The user must accept the terms of the license.
+  description: The right to use the software for personal, non-commercial purposes.
+  title: Personal Use
+- allowed: true
+  conditions: The user must accept the terms of the license.
+  description: The right to use the software for commercial purposes.
+  title: Commercial Use
+- allowed: true
+  conditions: The modified work must carry prominent notices stating that it has been
+    modified, the date of modification, and that it is released under the same license.
+  description: The right to modify the software.
+  title: Software Modification
+- allowed: true
+  conditions: The distributed work must be accompanied by the source code, a written
+    offer for the source code, or access to the source code, and must carry all appropriate
+    notices.
+  description: The right to distribute the software.
+  title: Software Distribution
+- allowed: false
+  conditions: Sublicensing is not allowed under this license.
+  description: The right to sublicense the software.
+  title: Sublicensing
+- allowed: true
+  conditions: You must conspicuously and appropriately publish on each copy an appropriate
+    copyright notice, keep intact all notices stating that this License and any non-permissive
+    terms added in accord with section 7 apply to the code, keep intact all notices
+    of the absence of any warranty, and give all recipients a copy of this License
+    along with the Program.
+  description: The right to convey verbatim copies of the Program's source code as
+    you receive it, in any medium.
+  title: Conveying Verbatim Copies
+- allowed: true
+  conditions: You must meet all conditions stated in section 5 of the license.
+  description: The right to convey a work based on the Program, or the modifications
+    to produce it from the Program, in the form of source code.
+  title: Conveying Modified Source Versions
+- allowed: true
+  conditions: You must also convey the machine-readable Corresponding Source under
+    the terms of this License, in one of the ways stated in section 6 of the license.
+  description: The right to convey a covered work in object code form.
+  title: Conveying Non-Source Forms
+- allowed: true
+  conditions: The additional terms must be stated in the relevant source files or
+    a notice indicating where to find the applicable terms.
+  description: The right to add additional terms to the covered work.
+  title: Adding Additional Terms
+- allowed: true
+  conditions: The license is terminated automatically if you propagate or modify a
+    covered work except as expressly provided under this License.
+  description: The right to terminate the license.
+  title: Termination
+- allowed: true
+  conditions: Ancillary propagation of a covered work occurring solely as a consequence
+    of using peer-to-peer transmission to receive a copy likewise does not require
+    acceptance.
+  description: The right to receive or run a copy of the Program without accepting
+    the License.
+  title: Acceptance Not Required for Having Copies
+- allowed: true
+  conditions: Each time you convey a covered work, the recipient automatically receives
+    a license from the original licensors, to run, modify and propagate that work,
+    subject to this License.
+  description: The right for downstream recipients to automatically receive a license
+    from the original licensors.
+  title: Automatic Licensing of Downstream Recipients
+- allowed: true
+  conditions: Each contributor grants you a non-exclusive, worldwide, royalty-free
+    patent license under the contributor's essential patent claims, to make, use,
+    sell, offer for sale, import and otherwise run, modify and propagate the contents
+    of its contributor version.
+  description: The right to grant a patent license under the contributor's essential
+    patent claims.
+  title: Patent Licensing

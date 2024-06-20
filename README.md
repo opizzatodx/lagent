@@ -1,6 +1,6 @@
 # L'Agent
 
-L'Agent is an open-source license assistant capable of answering questions about the usage of a license. 
+L'Agent is an open-source license assistant capable of answering questions about the use of a license. 
 
 ## Context
   
@@ -10,13 +10,13 @@ When used directly AI could not be trusted enough for legal advice.
 
 ## Solution
 
-L'Agent preprocesses licenses by generating all usage cases related to each license, using a Large Language Model (LLM) with structured output.
+L'Agent preprocesses licenses by generating all use cases related to each license, using a Large Language Model (LLM) with structured output.
 
 These use cases can be verified and corrected by a legal expert.
 
-L'Agent chat uses only these certified usage cases to respond to user requests.
+L'Agent chat uses only these certified use cases to respond to user requests.
 
-L'Agent states its asumptions about which license and which usage case is used to provide the answer, ensuring that the user is responsible for the shared understanding of the request, and the validity of the answer.
+L'Agent states its asumptions about which license and which use case is used to provide the answer, ensuring that the user is responsible for the shared understanding of the request, and the validity of the answer.
 
 
 ![Architecture of L'Agent.](./assets/images/lagent_architecture.png)
@@ -24,8 +24,8 @@ L'Agent states its asumptions about which license and which usage case is used t
 Chat workflow
   1. Initial question from the user.
   2. L'Agent interacts until the license is fully identified.
-  3. Then L'Agent interacts until a usage case of this license matches the user's usage case
-  4. Then L'Agent provides the answer using this usage case.
+  3. Then L'Agent interacts until a use case of this license matches the user's use case
+  4. Then L'Agent provides the answer using this use case.
 
 L'Agent is preloaded with 32 open-source software licenses for demonstration purpose.
 
@@ -57,7 +57,7 @@ pip install -r requirements
 python app.py -h
 ```
 
-* Use the command line interface (CLI) for generating usage cases for a license
+* Use the command line interface (CLI) for generating use cases for a license
 
 ```sh
 python cli.py -h
@@ -73,20 +73,20 @@ python app.py -s
 ```
 
 The Chat app has two tabs:
-* The chat interface: You can chat about your usage of a specific license.
+* The chat interface: You can chat about your use of a specific license.
   * For example, you can ask: 'Can I use GPL for personal use?'
   * You must clear the chat history ("clear" button) to start a new conversation and reset the context from the previous one.
 
 ![Chat tab of L'Agent.](./assets/images/lagent_chat.png)
 
 * The license database: Displays all the licenses supported by the chat.
-  * Select a license in the table to see its content and the list of usage cases.
+  * Select a license in the table to see its content and the list of use cases.
 
 ![Licenses tab of L'Agent.](./assets/images/lagent_licenses.png)
 
 ## CLI for preprocessing 
 
-* Run the usage case generator on a specific license
+* Run the use case generator on a specific license
 
 ```sh
 python cli.py -t cecill-2.1
@@ -113,7 +113,7 @@ List all open source licenses, for each provide a link to the license text and a
 
 * You can add the content of a new license in this directory, file name format is ```[license_tag].txt ```
 
-* You can run the usage case generator on all licenses:
+* You can run the use case generator on all licenses:
 
 ```sh
 python cli.py -a

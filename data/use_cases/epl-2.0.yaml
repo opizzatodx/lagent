@@ -1,0 +1,54 @@
+use_cases:
+- allowed: true
+  conditions: The software is used as is, without any modifications, and the user
+    complies with all terms and conditions of the Eclipse Public License - v 2.0.
+  description: The right to use the software for personal, non-commercial purposes.
+  title: Personal Use
+- allowed: true
+  conditions: The user must comply with all terms and conditions of the Eclipse Public
+    License - v 2.0, and if the software is included in a commercial product offering,
+    the user agrees to defend and indemnify every other Contributor against any losses,
+    damages and costs arising from claims related to their distribution of the Program
+    in a commercial product offering.
+  description: The right to use the software for commercial purposes.
+  title: Commercial Use
+- allowed: true
+  conditions: The user must make the modified software available as Source Code under
+    the Eclipse Public License - v 2.0, and accompany the Program with a statement
+    that the Source Code for the Program is available under this Agreement, and informs
+    Recipients how to obtain it in a reasonable manner on or through a medium customarily
+    used for software exchange.
+  description: The right to modify the software.
+  title: Software Modification
+- allowed: true
+  conditions: The user must make the Program available as Source Code under the Eclipse
+    Public License - v 2.0, accompany the Program with a statement that the Source
+    Code for the Program is available under this Agreement, and informs Recipients
+    how to obtain it in a reasonable manner on or through a medium customarily used
+    for software exchange.
+  description: The right to distribute the software.
+  title: Software Distribution
+- allowed: true
+  conditions: The sublicense must effectively disclaim on behalf of all other Contributors
+    all warranties and conditions, effectively exclude on behalf of all other Contributors
+    all liability for damages, not attempt to limit or alter the recipients' rights
+    in the Source Code under section 3.2, and require any subsequent distribution
+    of the Program by any party to be under a license that satisfies the requirements
+    of section 3.
+  description: The right to sublicense the software.
+  title: Sublicensing
+- allowed: false
+  conditions: If the user institutes such patent litigation, their rights granted
+    under Section 2(b) of the Eclipse Public License - v 2.0 shall terminate as of
+    the date such litigation is filed.
+  description: The right to institute patent litigation against any entity alleging
+    that the Program itself infringes such Recipient's patent(s).
+  title: Patent Infringement Claim
+- allowed: false
+  conditions: If the user fails to comply with any of the material terms or conditions
+    of the Agreement and does not cure such failure in a reasonable period of time
+    after becoming aware of such noncompliance, they must cease use and distribution
+    of the Program as soon as reasonably practicable.
+  description: The right to continue using and distributing the Program after failing
+    to comply with the material terms or conditions of the Agreement.
+  title: Use and Distribution After Noncompliance

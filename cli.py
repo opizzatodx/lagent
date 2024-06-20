@@ -9,7 +9,7 @@ logger = logging.getLogger(__name__)
 
 def parse_args():
     import argparse
-    parser = argparse.ArgumentParser(description='Rewrite one or each license into an complete list of usage cases.')
+    parser = argparse.ArgumentParser(description='Rewrite one or each license into an complete list of use cases.')
     parser.add_argument('-a', '--all', action='store_true', help='process all licenses')
     parser.add_argument('-t', '--license_tag', type=str, help='license tag to process, process one license')
     parser.add_argument('-l', '--list', action='store_true', help='list all license tags')
@@ -24,7 +24,7 @@ def main(args):
     licenses_processor = LicenseProcessor(
         licenses_and_link_file_path="./data/licenses_and_link.yaml", 
         licenses_text_dir="./data/licenses_text", 
-        licenses_usage_cases_dir="./data/usage_cases"
+        licenses_use_cases_dir="./data/use_cases"
     )
     licenses = licenses_processor.read_licenses_and_link()
     logger.info(f"{len(licenses)=}")
@@ -47,8 +47,8 @@ def main(args):
 
     for license in licenses:
         tag = license["tag"]
-        usage_cases = licenses_processor.generate_license_usage_cases(tag)
-        licenses_processor.save_license_usage_cases(tag, usage_cases)
+        use_cases = licenses_processor.generate_license_use_cases(tag)
+        licenses_processor.save_license_use_cases(tag, use_cases)
 
 if __name__ == "__main__":
     args = parse_args()

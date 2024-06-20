@@ -1,0 +1,50 @@
+use_cases:
+- allowed: true
+  conditions: Attribution must be given to the original creator and a link to the
+    license must be provided.
+  description: Using the software for non-commercial personal purposes.
+  title: Personal Use
+- allowed: false
+  conditions: Not applicable as commercial use is not permitted under this license.
+  description: Using the software for commercial purposes.
+  title: Commercial Use
+- allowed: true
+  conditions: The modified software must be shared under the same license and attribution
+    must be given to the original creator.
+  description: Modifying or adapting the software.
+  title: Modification
+- allowed: true
+  conditions: The software must be shared under the same license and attribution must
+    be given to the original creator.
+  description: Sharing or distributing the software to others.
+  title: Distribution
+- allowed: false
+  conditions: Not applicable as sublicensing is not permitted under this license.
+  description: Granting a license to use the software to a third party.
+  title: Sublicensing
+- allowed: false
+  conditions: Not applicable as patent and trademark rights are not licensed under
+    this license.
+  description: Using the software in a way that involves patent and trademark rights.
+  title: Use with Patent and Trademark Rights
+- allowed: false
+  conditions: Not applicable as these rights are not licensed under this license.
+  description: Using the software in a way that involves publicity, privacy, and/or
+    personality rights.
+  title: Use with Publicity, Privacy, and Personality Rights
+- allowed: true
+  conditions: The Licensor waives these rights to the limited extent necessary to
+    allow you to exercise the Licensed Rights.
+  description: Using the software in a way that involves moral rights such as the
+    right of integrity.
+  title: Use with Moral Rights
+- allowed: true
+  conditions: You must comply with the conditions in Section 3(a) if you share all
+    or a substantial portion of the contents of the database.
+  description: Using the software in a way that involves Sui Generis Database Rights.
+  title: Use with Sui Generis Database Rights
+- allowed: true
+  conditions: You are allowed to make technical modifications necessary to circumvent
+    Effective Technological Measures.
+  description: Using the software in a way that involves Effective Technological Measures.
+  title: Use with Effective Technological Measures
