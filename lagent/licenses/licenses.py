@@ -6,7 +6,7 @@ from pydantic import BaseModel, Field, ValidationError
 from langchain_core.pydantic_v1 import ValidationError as V1ValidationError
 
 from lagent.common.utils import load_text_file_lines, read_yaml_file, write_yaml_file
-from lagent.licenses.use_case import prompt, parser, UseCases
+from lagent.licenses.prompt.use_case import prompt, parser, UseCases
 
 logger = logging.getLogger(__name__)
 

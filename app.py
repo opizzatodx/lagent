@@ -3,7 +3,7 @@ import gradio as gr
 import logging
 import argparse
 from dotenv import load_dotenv
-from lagent.chat.agent import LicenseAgent
+from lagent.chat.agent import Agent
 from lagent.licenses.licenses import LicenseProcessor
 
 # https://github.com/langchain-ai/langchain/discussions/21596
@@ -104,9 +104,9 @@ def main(args):
         logger.error("error reading licenses database")
         return False
 
-    license_agent = LicenseAgent(licenses_data)
+    agent = Agent(licenses_data)
 
-    app = App(license_processor, licenses_data, license_agent)
+    app = App(license_processor, licenses_data, agent)
     app.launch(share=args.share)
 
 

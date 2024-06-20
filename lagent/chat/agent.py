@@ -6,14 +6,17 @@ from langchain_core.runnables.history import RunnableWithMessageHistory
 from langchain_core.output_parsers import StrOutputParser
 
 from lagent.common.utils import find_a_line_starting_with
-from .license import prompt as license_prompt
-from .use_case import prompt as use_case_prompt
-from .response import prompt as response_prompt
+from .prompt.license import prompt as license_prompt
+from .prompt.use_case import prompt as use_case_prompt
+from .prompt.response import prompt as response_prompt
+
+# https://github.com/langchain-ai/langchain/discussions/21596
+logging.getLogger("langchain_core.tracers.core").setLevel(logging.ERROR)
 
 logger = logging.getLogger(__name__)
 
 
-class LicenseAgent():
+class Agent():
 
     def __init__(self, licenses_data={}):
         self.licenses_data = licenses_data
