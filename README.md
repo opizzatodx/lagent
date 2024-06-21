@@ -41,9 +41,41 @@ L'Agent is preloaded with 32 open-source software licenses for demonstration pur
   * LLM [mixtral-8x22b-instruct](https://build.nvidia.com/mistralai/mixtral-8x22b-instruct) for cross-validation of L'Agent answer
 * [NVIDIA NEMO Guardrails](https://docs.nvidia.com/nemo/guardrails/index.html) for L'Agent output rail implementation
 * [LangChain](https://www.langchain.com/langchain) as generative AI framework 
-    * ```langchain-nvidia-ai-endpoints``` integration with NVIDIA NIM
 * [LangSmith](https://www.langchain.com/langsmith) for generative AI monitoring
 * [Gradio](https://www.gradio.app/) as user interface 
+        
+# Design
+
+## Use case generation
+
+The use case generation is a LangChain chain with:
+* a prompt with structured output build using [ChatPromptTemplate]() with license text plus [PydanticOutputParser]() instructions and output parsing
+* a NVIDIA Chat LLM model using [```langchain-nvidia-ai-endpoints```](https://python.langchain.com/v0.2/docs/integrations/providers/nvidia/)
+
+## Chat engine
+
+The chat engine is a composition of 3 successive chats:
+
+Each one is
+* a [RunnableWithMessageHistory](https://python.langchain.com/v0.2/docs/how_to/message_history/) chain with
+* a NVIDIA Chat LLM model using [```langchain-nvidia-ai-endpoints```](https://python.langchain.com/v0.2/docs/integrations/providers/nvidia/).
+
+*LICENSE* chat
+  * aims at identifying what is the exact license the user is talking about,
+  * using a 3-shots CoT [ChatPromptTemplate]() with the list of license names as parameter.
+
+*USE_CASE* chat
+  * aims at identifying which use case from the use case database the user is talking about,
+  * using a 2-shots CoT [ChatPromptTemplate]() with the list of the license use cases as parameter.
+  * The LLM answer is prefixed with the name of the license that was identified by the *LICENSE* chat.
+
+*RESPONSE* chat
+  * aims at providing the final answer to the user,
+  * using a 2-shots CoT [ChatPromptTemplate]() with the name of the license and the use case as parameters.
+  * The LLM answer is prefixed with the name of the license and the use case that was identified in by the *LICENSE* and *USE_CASE* chats.
+  * The LLM model is decorated with [NEMO Guardrails RunnableRails](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/docs/user_guides/langchain/runnable-rails.md),
+      * configured with an [output rail](https://docs.nvidia.com/nemo/guardrails/getting_started/5_output_rails/README.html) with the license name and use case as [NEMO Guardrails prompt variables](https://github.com/NVIDIA/NeMo-Guardrails/blob/develop/docs/user_guides/advanced/prompt-customization.md#prompt-variables)
+      * prompted to verify the consistency of the LLM output with the license name and use case.
 
 
 # Install
