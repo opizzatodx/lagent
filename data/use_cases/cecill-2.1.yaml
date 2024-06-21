@@ -20,34 +20,21 @@ use_cases:
   conditions: The distribution must comply with all the provisions of the Agreement
     and be accompanied by a copy of the Agreement, a notice relating to the limitation
     of both the Licensor's warranty and liability as set forth in Articles 8 and 9,
-    and in the event that only the Object Code of the Software is redistributed, the
-    user must allow effective access to the full Source Code of the Software for a
-    period of at least three years from the distribution of the Software.
+    and, in the event that only the Object Code of the Software is redistributed,
+    the user must allow effective access to the full Source Code of the Software for
+    a period of at least three years from the distribution of the Software.
   description: The user is authorized to distribute copies of the modified or unmodified
     Software to third parties.
   title: Distribution of the Software
 - allowed: false
-  conditions: Not applicable as sublicensing is not allowed under this Agreement.
+  conditions: Not applicable.
   description: The user is allowed to sublicense the Software to third parties.
   title: Sublicensing of the Software
 - allowed: true
-  conditions: The user must accept the terms and conditions of the Agreement.
-  description: The user is authorized to use the Software, without any limitation
-    as to its fields of application.
-  title: Use of the Software for any Purpose
-- allowed: true
-  conditions: This applies when the user carries out any or all loading, displaying,
-    running, transmission or storage operation as regards the Software, that they
-    are entitled to carry out hereunder.
-  description: The user is allowed to observe, study or test the operation of the
-    Software so as to determine the ideas and principles behind any or all constituent
-    elements of said Software.
-  title: Study and Testing of the Software
-- allowed: true
   conditions: The terms and conditions of this Agreement do not apply to the External
     Module.
-  description: When the user has developed an External Module, they are allowed to
-    distribute it under a separate license agreement.
+  description: The user is allowed to develop an External Module and distribute it
+    under a separate license agreement.
   title: Distribution of External Modules
 - allowed: true
   conditions: None.
@@ -55,16 +42,34 @@ use_cases:
     of the versions of the GNU GPL, GNU Affero GPL and/or EUPL in the Modified or
     unmodified Software, and distribute that entire code under the terms of the same
     version of the GNU GPL, GNU Affero GPL and/or EUPL.
-  title: Inclusion of the Software in other Licensed Works
+  title: Inclusion of the Software in Other Licensed Works
 - allowed: false
-  conditions: Not applicable as infringement of intellectual property rights is not
-    allowed under this Agreement.
-  description: The user is not allowed to directly or indirectly infringe the intellectual
-    property rights on the Software of the Holder and/or Contributors.
+  conditions: Not applicable.
+  description: The user can use the Software without accepting the terms and conditions
+    of the Agreement.
+  title: Use of the Software Without Acceptance of the Agreement
+- allowed: false
+  conditions: Not applicable.
+  description: The user can use the Software beyond the term of the Agreement.
+  title: Use of the Software Beyond the Term of the Agreement
+- allowed: false
+  conditions: Not applicable.
+  description: The user can remove or modify the intellectual property notices attached
+    to the Software.
+  title: Removal or Modification of Intellectual Property Notices
+- allowed: false
+  conditions: Not applicable.
+  description: The user can directly or indirectly infringe the intellectual property
+    rights on the Software of the Holder and/or Contributors.
   title: Infringement of Intellectual Property Rights
 - allowed: false
-  conditions: Not applicable as removal or modification of intellectual property notices
-    is not allowed under this Agreement.
-  description: The user is not allowed to remove, or modify, in any manner, the intellectual
-    property notices attached to the Software.
-  title: Removal or Modification of Intellectual Property Notices
+  conditions: Not applicable.
+  description: The user can claim compensation for any consequential loss suffered
+    as a result of a fault on the part of the relevant Licensor.
+  title: Claim for Consequential Loss
+- allowed: true
+  conditions: The user bears the responsibility for any damage caused.
+  description: The user can use the Software without verifying its suitability for
+    their requirements, its good working order, and ensuring that it shall not cause
+    damage to either persons or properties.
+  title: Use of the Software Without Verification

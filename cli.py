@@ -19,13 +19,13 @@ def parse_args():
     license_subparsers = license_parser.add_subparsers(dest="sub_action")
     license_subparsers.add_parser('list', help='list licenses')
 
-    use_case_parser = subparsers.add_parser('use_case', help='Use case management')
+    use_case_parser = subparsers.add_parser('use-case', help='Use case management')
     use_case_subparsers = use_case_parser.add_subparsers(dest="sub_action")
 
     # generate use cases
     generate_uc_parser = use_case_subparsers.add_parser('generate', help='generate use cases for licenses')
     generate_uc_parser.add_argument('-a', '--all', action='store_true', help='generate use cases for all licenses')
-    generate_uc_parser.add_argument('-t', '--license_tag', type=str, help='generate use cases for the [license_tag] license')
+    generate_uc_parser.add_argument('-t', '--license-tag', type=str, help='generate use cases for the [license_tag] license')
 
     # chat command line
     chat_parser = subparsers.add_parser('chat', help='Chat with L\'Agent. ')
@@ -53,7 +53,7 @@ def main(args):
                 print(license["tag"])
             return
 
-    if args.action == "use_case":
+    if args.action == "use-case":
         if args.sub_action == "generate":
 
             # possibly restrict to one license

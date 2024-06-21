@@ -64,8 +64,8 @@ class LicenseProcessor():
     def generate_license_use_cases(self, license_tag):
 
         license_content = self.read_license_text(license_tag)
-        logger.info(f"processing license: {license_tag}, {len(license_content)=}")
         license_str = "".join(license_content)
+        logger.info(f"processing license: {license_tag}, {len(license_str)=}")
 
         try:
             result = self.chain.invoke({"licence_text": license_str})
