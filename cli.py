@@ -68,6 +68,9 @@ def main(args):
             for license in licenses:
                 tag = license["tag"]
                 use_cases = license_processor.generate_license_use_cases(tag)
+                if use_cases is None:
+                    logger.error(f"error generating use cases for {tag}")
+                    continue
                 license_processor.save_license_use_cases(tag, use_cases)
 
     if args.action == "chat":
