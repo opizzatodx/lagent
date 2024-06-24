@@ -2,7 +2,7 @@
 
 L'Agent is an open-source license assistant capable of providing verified answers to questions about the use of a license. 
 
-This project was created for the the [Generative AI Agents Developer Contest by NVIDIA and LangChain](https://www.nvidia.com/en-us/ai-data-science/generative-ai/developer-contest-with-langchain/).
+This project was created for the [Generative AI Agents Developer Contest by NVIDIA and LangChain](https://www.nvidia.com/en-us/ai-data-science/generative-ai/developer-contest-with-langchain/).
 
 ## Context
   
@@ -22,7 +22,7 @@ L'Agent chat is a generative AI agent chatbot that uses only these certified use
 
 L'Agent states its asumptions about which license and which use case is used to provide the answer, ensuring that the user is responsible for the shared understanding of the request, and the validity of the answer.
 
-Finally the answer of L'Agent is cross-validated using [NEMO Guardrails](https://docs.nvidia.com/nemo/guardrails/index.html) against the license name and the license use case, ensuring the thrustfullness of the answer.
+Finally the answer of L'Agent is cross-validated using [NEMO Guardrails](https://docs.nvidia.com/nemo/guardrails/index.html) against the license name and the license use case, ensuring the trustfulness of the answer.
 
 ![Architecture of L'Agent.](./assets/images/lagent_architecture.png)
 
