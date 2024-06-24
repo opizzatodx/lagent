@@ -1,26 +1,36 @@
 use_cases:
 - allowed: true
-  conditions: The software is provided 'AS IS', without warranty of any kind, express
-    or implied.
+  conditions: The software is provided 'AS IS', without warranty of any kind.
   description: The right to use the software for personal purposes.
   title: Personal Use
 - allowed: true
-  conditions: The software is provided 'AS IS', without warranty of any kind, express
-    or implied.
+  conditions: The software is provided 'AS IS', without warranty of any kind.
   description: The right to use the software for commercial purposes.
   title: Commercial Use
 - allowed: true
-  conditions: The software is provided 'AS IS', without warranty of any kind, express
-    or implied.
+  conditions: The software is provided 'AS IS', without warranty of any kind.
   description: The right to modify the software.
   title: Software Modification
 - allowed: true
-  conditions: The software is provided 'AS IS', without warranty of any kind, express
-    or implied.
+  conditions: The software is provided 'AS IS', without warranty of any kind.
   description: The right to distribute the software, either in source code form or
     as a compiled binary.
   title: Software Distribution
-- allowed: false
-  conditions: The software is dedicated to the public domain and cannot be sublicensed.
+- allowed: true
+  conditions: The software is provided 'AS IS', without warranty of any kind.
   description: The right to sublicense the software.
   title: Sublicensing
+- allowed: false
+  conditions: The software is provided 'AS IS', without warranty of any kind, including
+    but not limited to the warranties of merchantability, fitness for a particular
+    purpose and noninfringement.
+  description: The right to claim warranty for the software, either express or implied.
+  title: Warranty Claim
+- allowed: false
+  conditions: In no event shall the authors be liable for any claim, damages or other
+    liability, whether in an action of contract, tort or otherwise, arising from,
+    out of or in connection with the software or the use or other dealings in the
+    software.
+  description: The right to hold the authors liable for any claim, damages or other
+    liability.
+  title: Liability Claim

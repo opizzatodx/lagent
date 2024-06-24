@@ -1,51 +1,66 @@
 use_cases:
 - allowed: true
-  conditions: The software must be attributed to the original creator and any modifications
-    must be indicated.
-  description: Using the software for non-commercial personal purposes.
+  conditions: The software must be attributed to the original creator and cannot be
+    used for commercial purposes.
+  description: The right to use the software for personal, non-commercial purposes.
   title: Personal Use
 - allowed: false
-  conditions: ''
-  description: Using the software for commercial purposes or for monetary compensation.
+  conditions: The license does not permit commercial use of the software.
+  description: The right to use the software for commercial purposes.
   title: Commercial Use
 - allowed: true
-  conditions: The software must be attributed to the original creator and any modifications
-    must be indicated.
-  description: Making changes or alterations to the original software.
+  conditions: The modified software must be attributed to the original creator and
+    cannot be used for commercial purposes.
+  description: The right to modify the software.
   title: Software Modification
 - allowed: true
-  conditions: The software must be attributed to the original creator, any modifications
-    must be indicated, and the same license terms must be applied.
-  description: Sharing or distributing the software to others.
+  conditions: The distributed software must be attributed to the original creator
+    and cannot be used for commercial purposes.
+  description: The right to distribute the software.
   title: Software Distribution
 - allowed: false
-  conditions: ''
-  description: Granting rights to use the software to a third party under different
-    terms and conditions.
+  conditions: The license does not permit sublicensing of the software.
+  description: The right to sublicense the software.
   title: Sublicensing
-- allowed: false
-  conditions: ''
-  description: Using the software in a way that involves patent and trademark rights.
-  title: Use with Patent and Trademark Rights
-- allowed: false
-  conditions: ''
-  description: Using the software in a way that involves publicity, privacy, and/or
-    personality rights.
-  title: Use with Publicity, Privacy, and Personality Rights
 - allowed: true
-  conditions: The conditions in Section 3(a) must be complied with if a substantial
-    portion of the database contents is shared.
-  description: Using the software in a way that involves Sui Generis Database Rights.
+  conditions: This Public License does not apply when Exceptions and Limitations are
+    in effect.
+  description: The right to use the software under fair use, fair dealing, or any
+    other exception or limitation to Copyright and Similar Rights.
+  title: Use with Exceptions and Limitations
+- allowed: false
+  conditions: Patent and trademark rights are not licensed under this Public License.
+  description: The right to use the software with patent and trademark rights.
+  title: Use with Patent and Trademark Rights
+- allowed: true
+  conditions: You must comply with the conditions in Section 3(a) if You Share all
+    or a substantial portion of the contents of the database.
+  description: The right to use the software with Sui Generis Database Rights.
   title: Use with Sui Generis Database Rights
 - allowed: true
-  conditions: The Licensor waives and/or agrees not to assert any such rights held
-    by the Licensor to the limited extent necessary to allow the exercise of the Licensed
-    Rights.
-  description: Using the software in a way that involves moral rights, such as the
-    right of integrity.
-  title: Use with Moral Rights
+  conditions: You may not offer or impose any additional or different terms or conditions
+    on, or apply any Effective Technological Measures to, the Licensed Material if
+    doing so restricts exercise of the Licensed Rights by any recipient of the Licensed
+    Material.
+  description: The right to share the software with downstream recipients.
+  title: Use with Downstream Recipients
 - allowed: true
-  conditions: The Licensor expressly reserves the right to collect such royalties,
-    including when the Licensed Material is used other than for NonCommercial purposes.
-  description: Using the software in a way that involves the payment of royalties.
+  conditions: To the extent possible, the Licensor waives and/or agrees not to assert
+    any such rights held by the Licensor to the limited extent necessary to allow
+    You to exercise the Licensed Rights, but not otherwise.
+  description: The right to use the software with moral rights, such as the right
+    of integrity.
+  title: Use with Moral Rights
+- allowed: false
+  conditions: Publicity, privacy, and/or other similar personality rights are not
+    licensed under this Public License.
+  description: The right to use the software with publicity, privacy, and/or other
+    similar personality rights.
+  title: Use with Publicity, Privacy, and/or Other Similar Personality Rights
+- allowed: true
+  conditions: To the extent possible, the Licensor waives any right to collect royalties
+    from You for the exercise of the Licensed Rights, whether directly or through
+    a collecting society under any voluntary or waivable statutory or compulsory licensing
+    scheme.
+  description: The right to use the software with royalties.
   title: Use with Royalties

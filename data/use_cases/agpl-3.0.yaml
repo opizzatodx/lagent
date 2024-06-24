@@ -8,7 +8,7 @@ use_cases:
   description: The right to use the software for commercial use
   title: Commercial Use
 - allowed: true
-  conditions: Must license the entire work under this License and include prominent
+  conditions: Must license the entire work under this License and display prominent
     notices stating that you modified it
   description: The right to modify the software
   title: Software Modification
@@ -43,8 +43,9 @@ use_cases:
     terms
   description: The right to add terms to a covered work
   title: Additional Terms
-- allowed: true
-  conditions: Must be expressly provided under this License
+- allowed: false
+  conditions: Any attempt otherwise to propagate or modify it is void, and will automatically
+    terminate your rights under this License
   description: The right to propagate or modify a covered work
   title: Termination
 - allowed: true
@@ -54,30 +55,30 @@ use_cases:
   title: Acceptance Not Required for Having Copies
 - allowed: true
   conditions: No conditions
-  description: The right for each recipient to receive a license from the original
-    licensors
+  description: The right for each recipient to automatically receive a license from
+    the original licensors
   title: Automatic Licensing of Downstream Recipients
 - allowed: true
-  conditions: Must be under the contributor's essential patent claims, to make, use,
-    sell, offer for sale, import and otherwise run, modify and propagate the contents
-    of its contributor version
+  conditions: Must make, use, sell, offer for sale, import and otherwise run, modify
+    and propagate the contents of its contributor version
   description: The right to a non-exclusive, worldwide, royalty-free patent license
+    under the contributor's essential patent claims
   title: Patents
-- allowed: true
-  conditions: Must satisfy simultaneously your obligations under this License and
-    any other pertinent obligations
+- allowed: false
+  conditions: Cannot convey a covered work if you cannot satisfy simultaneously your
+    obligations under this License and any other pertinent obligations
   description: The right to convey a covered work
   title: No Surrender of Others' Freedom
 - allowed: true
-  conditions: The terms of this License will continue to apply to the part which is
-    the covered work
-  description: The right to link or combine any covered work with a work licensed
-    under version 3 of the GNU Affero General Public License into a single combined
-    work
-  title: Use with the GNU Affero General Public License
+  conditions: Must provide access to the Corresponding Source from a network server
+    at no charge
+  description: The right to modify the Program and offer all users interacting with
+    it remotely through a computer network an opportunity to receive the Corresponding
+    Source
+  title: Remote Network Interaction
 - allowed: true
   conditions: If the Program specifies that a certain numbered version of the GNU
-    General Public License 'or any later version' applies to it
+    Affero General Public License 'or any later version' applies to it
   description: The right to follow the terms and conditions of any later version of
-    the GNU General Public License
+    the GNU Affero General Public License
   title: Revised Versions of this License

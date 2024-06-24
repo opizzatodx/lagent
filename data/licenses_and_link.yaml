@@ -20,6 +20,9 @@ licenses_and_link:
   - tag: lgpl-3.0
     name: GNU Lesser General Public License (LGPL) 3.0
     link: https://www.gnu.org/licenses/lgpl-3.0.en.html
+  - tag: agpl-3.0
+    name: GNU Affero General Public License (AGPL) 3.0
+    link: https://www.gnu.org/licenses/agpl-3.0.html
   - tag: mit
     name: MIT License
     link: https://opensource.org/licenses/MIT

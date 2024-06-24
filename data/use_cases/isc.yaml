@@ -1,31 +1,32 @@
 use_cases:
 - allowed: true
   conditions: The copyright notice and this permission notice must appear in all copies.
-  description: The right to use the software for personal purposes.
-  title: Personal Use
+  description: The right to use the software for personal purposes
+  title: Use of the software for personal use
 - allowed: true
   conditions: The copyright notice and this permission notice must appear in all copies.
-  description: The right to use the software for commercial purposes.
-  title: Commercial Use
+  description: The right to use the software for commercial purposes
+  title: Use of the software for commercial use
 - allowed: true
   conditions: The copyright notice and this permission notice must appear in all copies.
-  description: The right to modify the software.
-  title: Software Modification
+  description: The right to modify the software
+  title: Modification of the software
 - allowed: true
   conditions: The copyright notice and this permission notice must appear in all copies.
-  description: The right to distribute the software.
-  title: Software Distribution
+  description: The right to distribute the software
+  title: Distribution of the software
 - allowed: false
-  conditions: Not applicable.
-  description: The right to sublicense the software.
-  title: Software Sublicensing
+  conditions: ''
+  description: The right to sublicense the software
+  title: Sublicensing of the software
 - allowed: false
-  conditions: The software is provided 'as is' and the author disclaims all warranties.
-  description: The right to claim warranty for the software.
-  title: Warranty Claim
+  conditions: ''
+  description: The right to claim warranty for the software
+  title: Claim of warranty for the software
 - allowed: false
-  conditions: The author is not liable for any special, direct, indirect, or consequential
-    damages or any damages whatsoever resulting from loss of use, data or profits.
-  description: The right to hold the author liable for any damages resulting from
-    the use of the software.
-  title: Liability Claim
+  conditions: ''
+  description: The author's liability for any special, direct, indirect, or consequential
+    damages or any damages whatsoever resulting from loss of use, data or profits,
+    whether in an action of contract, negligence or other tortious action, arising
+    out of or in connection with the use or performance of this software.
+  title: Liability for damages resulting from the use of the software

@@ -1,50 +1,48 @@
 use_cases:
 - allowed: true
-  conditions: Attribution must be given to the original creator and a link to the
-    license must be provided.
-  description: Using the software for non-commercial personal purposes.
+  conditions: The software must be attributed to the original author and any modifications
+    must be indicated.
+  description: The right to use the software for personal, non-commercial purposes.
   title: Personal Use
 - allowed: false
-  conditions: Not applicable as commercial use is not permitted under this license.
-  description: Using the software for commercial purposes.
+  conditions: ''
+  description: The right to use the software for commercial purposes.
   title: Commercial Use
 - allowed: true
-  conditions: The modified software must be shared under the same license and attribution
-    must be given to the original creator.
-  description: Modifying or adapting the software.
+  conditions: The software must be attributed to the original author and any modifications
+    must be indicated. The modified software must be shared under the same license.
+  description: The right to modify the software.
   title: Modification
 - allowed: true
-  conditions: The software must be shared under the same license and attribution must
-    be given to the original creator.
-  description: Sharing or distributing the software to others.
+  conditions: The software must be attributed to the original author and any modifications
+    must be indicated. The distributed software must be shared under the same license.
+  description: The right to distribute the software.
   title: Distribution
 - allowed: false
-  conditions: Not applicable as sublicensing is not permitted under this license.
-  description: Granting a license to use the software to a third party.
+  conditions: ''
+  description: The right to sublicense the software.
   title: Sublicensing
 - allowed: false
-  conditions: Not applicable as patent and trademark rights are not licensed under
-    this license.
-  description: Using the software in a way that involves patent and trademark rights.
+  conditions: ''
+  description: The right to use the software with patent and trademark rights.
   title: Use with Patent and Trademark Rights
 - allowed: false
-  conditions: Not applicable as these rights are not licensed under this license.
-  description: Using the software in a way that involves publicity, privacy, and/or
-    personality rights.
-  title: Use with Publicity, Privacy, and Personality Rights
-- allowed: true
-  conditions: The Licensor waives these rights to the limited extent necessary to
-    allow you to exercise the Licensed Rights.
-  description: Using the software in a way that involves moral rights such as the
-    right of integrity.
-  title: Use with Moral Rights
-- allowed: true
-  conditions: You must comply with the conditions in Section 3(a) if you share all
-    or a substantial portion of the contents of the database.
-  description: Using the software in a way that involves Sui Generis Database Rights.
-  title: Use with Sui Generis Database Rights
-- allowed: true
-  conditions: You are allowed to make technical modifications necessary to circumvent
-    Effective Technological Measures.
-  description: Using the software in a way that involves Effective Technological Measures.
+  conditions: ''
+  description: The right to use the software for publicity, privacy, and/or other
+    similar personality rights.
+  title: Use for Publicity, Privacy, and/or Other Similar Personality Rights
+- allowed: false
+  conditions: ''
+  description: The right to use the software with effective technological measures
+    that restrict exercise of the licensed rights.
   title: Use with Effective Technological Measures
+- allowed: false
+  conditions: ''
+  description: The right to use the software with additional terms or conditions.
+  title: Use with Additional Terms or Conditions
+- allowed: true
+  conditions: The software must be attributed to the original author and any modifications
+    must be indicated. The extracted, reused, reproduced, and shared contents of the
+    database must be for non-commercial purposes only.
+  description: The right to use the software with Sui Generis Database Rights.
+  title: Use with Sui Generis Database Rights

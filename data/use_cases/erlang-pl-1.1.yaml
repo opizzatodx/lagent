@@ -1,52 +1,70 @@
 use_cases:
 - allowed: true
-  conditions: The software must be used in compliance with the terms of the Erlang
-    Public License.
-  description: The right to use the software for personal, non-commercial purposes.
+  conditions: The software is provided 'AS IS', without warranty of any kind. The
+    user assumes the cost of any necessary servicing, repair or correction.
+  description: The right to use the software for personal use.
   title: Personal Use
 - allowed: true
-  conditions: The software must be used in compliance with the terms of the Erlang
-    Public License.
-  description: The right to use the software for commercial purposes.
+  conditions: The software is provided 'AS IS', without warranty of any kind. The
+    user assumes the cost of any necessary servicing, repair or correction.
+  description: The right to use the software for commercial use.
   title: Commercial Use
 - allowed: true
-  conditions: The modifications must be made available in Source Code form under the
-    terms of the Erlang Public License and must be documented with the date of change
-    and a prominent statement that the Modification is derived from Original Code
-    provided by the Initial Developer.
-  description: The right to modify the source code of the software.
+  conditions: Any modifications must be made available in Source Code form under the
+    terms of this License. The user must cause all Covered Code to which they contribute
+    to contain a file documenting the changes made and the date of any change.
+  description: The right to modify the software.
   title: Software Modification
 - allowed: true
-  conditions: The distribution must be under the terms of the Erlang Public License,
-    include a copy of the License with every copy of the Source Code, and must not
-    alter or restrict the applicable version of the License or the recipients' rights.
-  description: The right to distribute the software, including the original code and
-    modifications.
+  conditions: The Source Code version of Covered Code may be distributed only under
+    the terms of this License. The user must include a copy of this License with every
+    copy of the Source Code they distribute. The user must make the Source Code version
+    available under the terms of this License either on the same media as an Executable
+    version or via an accepted Electronic Distribution Mechanism to anyone to whom
+    they made an Executable version available.
+  description: The right to distribute the software.
   title: Software Distribution
 - allowed: true
-  conditions: The sublicense must be under the terms of the Erlang Public License
-    and must not alter or restrict the applicable version of the License or the recipients'
-    rights.
-  description: The right to grant further licenses for the use and distribution of
-    the software.
-  title: Software Sublicensing
+  conditions: The user may sublicense the Original Code or Modifications, but solely
+    to the extent that any such patent is reasonably necessary to enable the user
+    to Utilize the Original Code or Modifications, and not to any greater extent that
+    may be necessary to Utilize further Modifications or combinations.
+  description: The right to sublicense the software.
+  title: Sublicensing
 - allowed: true
-  conditions: The requirements of the Erlang Public License must be fulfilled for
-    the covered code.
-  description: The right to create a larger work by combining the covered code with
-    other code not governed by the terms of the Erlang Public License.
-  title: Creation of Larger Works
+  conditions: The user may do so only on their own behalf, and not on behalf of the
+    Initial Developer or any Contributor. The user must make it absolutely clear that
+    any such warranty, support, indemnity or liability obligation is offered by the
+    user alone, and the user hereby agrees to indemnify the Initial Developer and
+    every Contributor for any liability incurred by the Initial Developer or such
+    Contributor as a result of warranty, support, indemnity or liability terms the
+    user offers.
+  description: The right to offer and charge a fee for warranty, support, indemnity
+    or liability obligations to one or more recipients of Covered Code.
+  title: Warranty, Support, Indemnity or Liability Obligations
 - allowed: true
-  conditions: The requirements of the Erlang Public License must be met for the covered
-    code, and a notice stating that the Source Code version of the Covered Code is
-    available under the terms of the License must be included.
-  description: The right to distribute the covered code in executable form.
+  conditions: The requirements of Section 3.1-3.5 have been met for that Covered Code,
+    and the user includes a notice stating that the Source Code version of the Covered
+    Code is available under the terms of this License, including a description of
+    how and where the user has fulfilled the obligations of Section 3.2.
+  description: The right to distribute Covered Code in Executable form.
   title: Distribution of Executable Versions
 - allowed: true
-  conditions: The offer must be made on the user's own behalf and not on behalf of
-    the Initial Developer or any Contributor, and the user must make it absolutely
-    clear that any such warranty, support, indemnity or liability obligation is offered
-    by the user alone.
-  description: The right to offer and charge a fee for warranty, support, indemnity
-    or liability obligations to one or more recipients of covered code.
-  title: Offering Warranty, Support, Indemnity or Liability Obligations
+  conditions: The user must make sure the requirements of this License are fulfilled
+    for the Covered Code.
+  description: The right to create a Larger Work by combining Covered Code with other
+    code not governed by the terms of this License and distribute the Larger Work
+    as a single product.
+  title: Creation of Larger Works
+- allowed: false
+  conditions: ''
+  description: The right to offer or impose any terms on any Source Code version that
+    alters or restricts the applicable version of this License or the recipients'
+    rights hereunder.
+  title: Alteration of License Terms
+- allowed: false
+  conditions: ''
+  description: The right to hold the Initial Developer or any Contributor liable for
+    any damages (neither direct nor indirect) caused by the utilization of Covered
+    Code.
+  title: Limitation of Liability

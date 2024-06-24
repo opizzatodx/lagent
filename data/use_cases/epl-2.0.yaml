@@ -1,54 +1,54 @@
 use_cases:
 - allowed: true
-  conditions: The software is used as is, without any modifications, and the user
-    complies with all terms and conditions of the Eclipse Public License - v 2.0.
-  description: The right to use the software for personal, non-commercial purposes.
+  conditions: The software is provided 'as is' without any warranty or liability.
+  description: The right to use the software for personal use.
   title: Personal Use
 - allowed: true
-  conditions: The user must comply with all terms and conditions of the Eclipse Public
-    License - v 2.0, and if the software is included in a commercial product offering,
-    the user agrees to defend and indemnify every other Contributor against any losses,
-    damages and costs arising from claims related to their distribution of the Program
-    in a commercial product offering.
-  description: The right to use the software for commercial purposes.
+  conditions: The user must defend and indemnify other contributors against any losses
+    arising from claims related to their commercial distribution of the software.
+  description: The right to use the software for commercial use.
   title: Commercial Use
 - allowed: true
-  conditions: The user must make the modified software available as Source Code under
-    the Eclipse Public License - v 2.0, and accompany the Program with a statement
-    that the Source Code for the Program is available under this Agreement, and informs
-    Recipients how to obtain it in a reasonable manner on or through a medium customarily
-    used for software exchange.
+  conditions: The modified work must be licensed under the same agreement and the
+    original copyright, patent, trademark, and attribution notices must be preserved.
   description: The right to modify the software.
   title: Software Modification
 - allowed: true
-  conditions: The user must make the Program available as Source Code under the Eclipse
-    Public License - v 2.0, accompany the Program with a statement that the Source
-    Code for the Program is available under this Agreement, and informs Recipients
-    how to obtain it in a reasonable manner on or through a medium customarily used
-    for software exchange.
+  conditions: The software must be distributed with the source code, under the same
+    agreement, and with a statement that the source code is available. The distributor
+    must inform recipients how to obtain the source code.
   description: The right to distribute the software.
   title: Software Distribution
 - allowed: true
-  conditions: The sublicense must effectively disclaim on behalf of all other Contributors
-    all warranties and conditions, effectively exclude on behalf of all other Contributors
-    all liability for damages, not attempt to limit or alter the recipients' rights
-    in the Source Code under section 3.2, and require any subsequent distribution
-    of the Program by any party to be under a license that satisfies the requirements
-    of section 3.
+  conditions: The sublicense must effectively disclaim all warranties and conditions,
+    exclude all liability for damages, not limit or alter the recipients' rights in
+    the source code, and require any subsequent distribution to be under a license
+    that satisfies the requirements of the agreement.
   description: The right to sublicense the software.
   title: Sublicensing
 - allowed: false
-  conditions: If the user institutes such patent litigation, their rights granted
-    under Section 2(b) of the Eclipse Public License - v 2.0 shall terminate as of
-    the date such litigation is filed.
-  description: The right to institute patent litigation against any entity alleging
-    that the Program itself infringes such Recipient's patent(s).
+  conditions: If a recipient institutes such a claim, their rights granted under the
+    agreement will terminate as of the date the litigation is filed.
+  description: The right to institute a patent infringement claim against any entity
+    alleging that the software infringes the patent.
   title: Patent Infringement Claim
+- allowed: true
+  conditions: The recipient assumes sole responsibility to secure any other intellectual
+    property rights needed.
+  description: The right to secure additional intellectual property rights needed
+    to distribute the software.
+  title: Additional Intellectual Property Rights
 - allowed: false
-  conditions: If the user fails to comply with any of the material terms or conditions
-    of the Agreement and does not cure such failure in a reasonable period of time
-    after becoming aware of such noncompliance, they must cease use and distribution
-    of the Program as soon as reasonably practicable.
-  description: The right to continue using and distributing the Program after failing
-    to comply with the material terms or conditions of the Agreement.
-  title: Use and Distribution After Noncompliance
+  conditions: Contributors may add their own appropriate notices but may not remove
+    or alter any existing notices.
+  description: The right to remove or alter any copyright, patent, trademark, attribution
+    notices, disclaimers of warranty, or limitations of liability contained within
+    the software.
+  title: Removal of Notices
+- allowed: true
+  conditions: The software may be distributed under a secondary license if it is combined
+    with other material in a separate file or files made available under a secondary
+    license, and the initial contributor attached to the source code the notice described
+    in Exhibit A of the agreement.
+  description: The right to distribute the software under a secondary license.
+  title: Distribution under Secondary License

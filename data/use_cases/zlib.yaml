@@ -1,30 +1,37 @@
 use_cases:
 - allowed: true
   conditions: The software is provided 'as-is', without any express or implied warranty.
-    The authors will not be held liable for any damages arising from the use of this
-    software.
   description: The right to use the software for personal purposes.
-  title: Personal Use
+  title: Use for Personal Use
 - allowed: true
   conditions: The software is provided 'as-is', without any express or implied warranty.
-    The authors will not be held liable for any damages arising from the use of this
-    software.
   description: The right to use the software for commercial applications.
-  title: Commercial Use
+  title: Use for Commercial Use
 - allowed: true
   conditions: Altered source versions must be plainly marked as such, and must not
-    be misrepresented as being the original software. This notice may not be removed
-    or altered from any source distribution.
+    be misrepresented as being the original software.
   description: The right to alter the software.
-  title: Software Modification
+  title: Modify the Software
 - allowed: true
-  conditions: The origin of this software must not be misrepresented. Altered source
-    versions must be plainly marked as such, and must not be misrepresented as being
-    the original software. This notice may not be removed or altered from any source
-    distribution.
-  description: The right to redistribute the software.
-  title: Software Distribution
+  conditions: The origin of this software must not be misrepresented; this notice
+    may not be removed or altered from any source distribution.
+  description: The right to redistribute the software freely.
+  title: Distribute the Software
 - allowed: false
-  conditions: Not applicable as sublicensing is not allowed.
-  description: The right to sublicense the software.
-  title: Software Sublicensing
+  conditions: Not specified in the provided license text.
+  description: The right to grant further licenses for the software.
+  title: Sublicense the Software
+- allowed: false
+  conditions: Not allowed to misrepresent the origin of this software.
+  description: Claiming that you wrote the original software.
+  title: Misrepresent the Origin
+- allowed: false
+  conditions: This notice may not be removed or altered from any source distribution.
+  description: Removing or altering this notice from any source distribution.
+  title: Remove or Alter the Notice
+- allowed: false
+  conditions: In no event will the authors be held liable for any damages arising
+    from the use of this software.
+  description: Holding the authors liable for any damages arising from the use of
+    this software.
+  title: Hold Authors Liable for Damages

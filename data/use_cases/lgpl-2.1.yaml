@@ -11,8 +11,8 @@ use_cases:
 - allowed: true
   conditions: You may modify your copy or copies of the Library or any portion of
     it, thus forming a work based on the Library, and copy and distribute such modifications
-    or work under the terms of Section 1 above, provided that you also meet all of
-    the conditions in Section 2.
+    or work under the terms of Section 1, provided that you also meet all of the conditions
+    in Section 2.
   description: The right to modify the software
   title: Modification
 - allowed: true
@@ -38,21 +38,33 @@ use_cases:
   description: The right to link the library with non-free programs
   title: Linking with Non-Free Programs
 - allowed: true
-  conditions: You may distribute a modified version of the library under the terms
-    of Section 1 and 2, provided that you also meet all of the conditions in Section
-    2.
-  description: The right to distribute a modified version of the library
-  title: Distribution of Modified Work
-- allowed: true
   conditions: You may copy and distribute the Library in object code or executable
-    form under the terms of Sections 1 and 2 above provided that you accompany it
-    with the complete corresponding machine-readable source code, which must be distributed
-    under the terms of Sections 1 and 2 above on a medium customarily used for software
+    form under the terms of Sections 1 and 2, provided that you accompany it with
+    the complete corresponding machine-readable source code, which must be distributed
+    under the terms of Sections 1 and 2 on a medium customarily used for software
     interchange.
   description: The right to distribute the Library in object code or executable form
   title: Distribution of Object Code
+- allowed: true
+  conditions: You may distribute derivative works of the Library under the terms of
+    this License, provided that you meet all of its conditions.
+  description: The right to distribute derivative works of the Library
+  title: Distribution of Derivative Works
 - allowed: true
   conditions: Any patent license obtained for a version of the library must be consistent
     with the full freedom of use specified in this license.
   description: The right to obtain a patent license for a version of the library
   title: Patent License
+- allowed: false
+  conditions: The Library is licensed 'as is' without warranty of any kind, either
+    expressed or implied, including, but not limited to, the implied warranties of
+    merchantability and fitness for a particular purpose.
+  description: The right to have a warranty for the Library
+  title: Warranty
+- allowed: false
+  conditions: In no event unless required by applicable law or agreed to in writing
+    will any copyright holder, or any other party who may modify and/or redistribute
+    the Library as permitted above, be liable to you for damages.
+  description: The right to hold the copyright holder or any other party liable for
+    damages
+  title: Liability

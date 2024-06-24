@@ -1,68 +1,62 @@
 use_cases:
 - allowed: true
-  conditions: The software must be used in accordance with the terms of the GNU Lesser
-    General Public License.
-  description: The right to use the software for personal, non-commercial purposes.
+  conditions: No additional conditions specified.
+  description: The right to use the software for personal use.
   title: Personal Use
 - allowed: true
-  conditions: The software must be used in accordance with the terms of the GNU Lesser
-    General Public License.
-  description: The right to use the software for commercial purposes.
+  conditions: No additional conditions specified.
+  description: The right to use the software for commercial use.
   title: Commercial Use
 - allowed: true
-  conditions: Modifications must be made in accordance with the terms of the GNU Lesser
-    General Public License, and the modified version must be conveyed under this License
-    or the GNU GPL.
+  conditions: If a modified facility refers to a function or data to be supplied by
+    an Application, the facility must still operate and perform whatever part of its
+    purpose remains meaningful.
   description: The right to modify the software.
-  title: Modification
+  title: Software Modification
 - allowed: true
-  conditions: Distribution must be done in accordance with the terms of the GNU Lesser
-    General Public License, and the distributed copies must be accompanied by a copy
-    of the GNU GPL and this license document.
-  description: The right to distribute verbatim copies of the software.
-  title: Distribution
+  conditions: Must accompany the software with a copy of the GNU GPL and this license
+    document.
+  description: The right to distribute the software.
+  title: Software Distribution
 - allowed: false
-  conditions: Not applicable as sublicensing is not allowed under the terms of the
-    GNU Lesser General Public License.
+  conditions: Not allowed to change or sublicense the software.
   description: The right to sublicense the software.
   title: Sublicensing
 - allowed: true
-  conditions: You must make a good faith effort to ensure that, in the event an Application
+  conditions: Must make a good faith effort to ensure that, in the event an Application
     does not supply the function or data, the facility still operates, and performs
     whatever part of its purpose remains meaningful.
-  description: The right to convey a copy of the modified version of the software
-    where a facility refers to a function or data to be supplied by an Application
-    that uses the facility.
-  title: Conveying Modified Versions with Additional Facilities
+  description: The right to convey a modified version of the software.
+  title: Conveying Modified Versions
 - allowed: true
-  conditions: You must give prominent notice with each copy of the object code that
+  conditions: Must give prominent notice with each copy of the object code that the
+    Library is used in it and that the Library and its use are covered by this License,
+    and accompany the object code with a copy of the GNU GPL and this license document.
+  description: The right to distribute object code that incorporates material from
+    a header file that is part of the Library.
+  title: Object Code Distribution
+- allowed: true
+  conditions: Must give prominent notice with each copy of the Combined Work that
     the Library is used in it and that the Library and its use are covered by this
-    License, and accompany the object code with a copy of the GNU GPL and this license
-    document.
-  description: The right to convey the object code form of an Application that incorporates
-    material from a header file that is part of the Library.
-  title: Conveying Object Code Incorporating Material from Library Header Files
+    License, accompany the Combined Work with a copy of the GNU GPL and this license
+    document, and provide the Minimal Corresponding Source under the terms of this
+    License.
+  description: The right to distribute a Combined Work.
+  title: Combined Works Distribution
 - allowed: true
-  conditions: 'You must give prominent notice with each copy of the Combined Work
-    that the Library is used in it and that the Library and its use are covered by
-    this License, accompany the Combined Work with a copy of the GNU GPL and this
-    license document, and do one of the following: convey the Minimal Corresponding
-    Source under the terms of this License, and the Corresponding Application Code
-    in a form suitable for, and under terms that permit, the user to recombine or
-    relink the Application with a modified version of the Linked Version to produce
-    a modified Combined Work, or use a suitable shared library mechanism for linking
-    with the Library.'
-  description: The right to convey a Combined Work produced by combining or linking
-    an Application with the Library.
-  title: Conveying Combined Works
-- allowed: true
-  conditions: You must accompany the combined library with a copy of the same work
-    based on the Library, uncombined with any other library facilities, conveyed under
-    the terms of this License, and give prominent notice with the combined library
-    that part of it is a work based on the Library, and explaining where to find the
-    accompanying uncombined form of the same work.
+  conditions: Must accompany the combined library with a copy of the same work based
+    on the Library, uncombined with any other library facilities, conveyed under the
+    terms of this License, and give prominent notice with the combined library that
+    part of it is a work based on the Library, and explaining where to find the accompanying
+    uncombined form of the same work.
   description: The right to place library facilities that are a work based on the
     Library side by side in a single library together with other library facilities
     that are not Applications and are not covered by this License, and convey such
-    a combined library under terms of your choice.
-  title: Conveying Combined Libraries
+    a combined library.
+  title: Combined Libraries
+- allowed: true
+  conditions: Must follow the terms and conditions either of the published version
+    or of any later version published by the Free Software Foundation.
+  description: The right to use revised and/or new versions of the GNU Lesser General
+    Public License.
+  title: Revised Versions

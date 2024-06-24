@@ -3,29 +3,35 @@ use_cases:
   conditions: The copyright notice and permission notice must be included in all copies
     or substantial portions of the Software.
   description: The right to use the software for personal purposes.
-  title: Personal Use
+  title: Personal Use of Software
 - allowed: true
   conditions: The copyright notice and permission notice must be included in all copies
     or substantial portions of the Software.
   description: The right to use the software for commercial purposes.
-  title: Commercial Use
+  title: Commercial Use of Software
 - allowed: true
   conditions: The copyright notice and permission notice must be included in all copies
     or substantial portions of the Software.
   description: The right to modify the software.
-  title: Software Modification
+  title: Modification of Software
 - allowed: true
   conditions: The copyright notice and permission notice must be included in all copies
     or substantial portions of the Software.
   description: The right to distribute copies of the software.
-  title: Software Distribution
+  title: Distribution of Software
 - allowed: true
   conditions: The copyright notice and permission notice must be included in all copies
     or substantial portions of the Software.
   description: The right to sublicense the software.
-  title: Software Sublicensing
+  title: Sublicensing of Software
 - allowed: false
   conditions: ''
-  description: The software is provided as is, without warranty of any kind, and the
-    authors or copyright holders are not liable for any claim, damages or other liability.
-  title: Warranty and Liability
+  description: The right to claim warranty for the software, including but not limited
+    to the warranties of merchantability, fitness for a particular purpose and noninfringement.
+  title: Warranty of Software
+- allowed: false
+  conditions: ''
+  description: The right to hold the authors or copyright holders liable for any claim,
+    damages or other liability arising from, out of or in connection with the software
+    or the use or other dealings in the software.
+  title: Liability for Damages

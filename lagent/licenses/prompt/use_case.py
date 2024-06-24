@@ -33,6 +33,8 @@ This list must include all the following standard cases:
 - the right to distribute the software
 - the right to sublicense the software
 
+The list must include all the use cases that are allowed and all the use cases that are not allowed in the original text.
+
 Answer the user query. Wrap the output in `json` tags. Output only the list of use cases.
 
 {format_instructions}

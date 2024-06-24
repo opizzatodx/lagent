@@ -1,29 +1,29 @@
 use_cases:
 - allowed: true
-  conditions: The software is provided 'as is', with all implied warranties disclaimed
-    and no liability for any damages caused by the use of the software.
-  description: The right to use the software for personal, non-commercial purposes.
-  title: Use of the Software for Personal Use
+  conditions: The software is provided 'as is' with no warranties and the user must
+    accept all liabilities.
+  description: The right to use the software for personal purposes.
+  title: Use of Software for Personal Use
 - allowed: true
-  conditions: The software is provided 'as is', with all implied warranties disclaimed
-    and no liability for any damages caused by the use of the software.
+  conditions: The software is provided 'as is' with no warranties and the user must
+    accept all liabilities.
   description: The right to use the software for commercial purposes.
-  title: Use of the Software for Commercial Use
+  title: Use of Software for Commercial Use
 - allowed: true
-  conditions: Redistributions of source code must retain the copyright notice, this
+  conditions: Redistributions of source code must retain the copyright notice, the
     list of conditions and the disclaimer.
-  description: The right to modify the source code of the software.
+  description: The right to modify the software.
   title: Modification of the Software
 - allowed: true
-  conditions: Redistributions of source code must retain the copyright notice, this
+  conditions: Redistributions of source code must retain the copyright notice, the
     list of conditions and the disclaimer. Redistributions in binary form must reproduce
-    the copyright notice, this list of conditions and the disclaimer in the documentation
+    the copyright notice, the list of conditions and the disclaimer in the documentation
     and/or other materials provided with the distribution.
   description: The right to distribute the software in source and binary forms.
   title: Distribution of the Software
 - allowed: false
   conditions: ''
-  description: The right to sublicense the software to third parties.
+  description: The right to sublicense the software.
   title: Sublicensing of the Software
 - allowed: false
   conditions: Specific prior written permission is required.

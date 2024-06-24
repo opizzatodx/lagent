@@ -1,59 +1,60 @@
 use_cases:
 - allowed: true
-  conditions: The software must be used in a manner that complies with all terms and
-    conditions of the license, including attribution and non-modification.
-  description: Using the software for non-commercial purposes
-  title: Personal Use
+  conditions: The use must be non-commercial in nature.
+  description: The user is allowed to use the Licensed Material for non-commercial
+    personal purposes.
+  title: Use of the Licensed Material for Personal Use
 - allowed: false
-  conditions: The license does not permit commercial use of the software.
-  description: Using the software for commercial advantage or monetary compensation
-  title: Commercial Use
+  conditions: Not applicable as this is not allowed.
+  description: The user is allowed to use the Licensed Material for commercial purposes.
+  title: Use of the Licensed Material for Commercial Use
 - allowed: true
-  conditions: Modifications are allowed for non-commercial purposes only and must
-    not be shared. The right to make modifications does not produce Adapted Material.
-  description: Making changes to the original software
-  title: Modification
+  conditions: The modifications must be for non-commercial purposes and should not
+    be shared.
+  description: The user is allowed to modify the Licensed Material.
+  title: Modification of the Licensed Material
 - allowed: true
-  conditions: The software can be shared for non-commercial purposes only, in whole
-    or in part. The shared material must retain certain information such as creator
-    identification, copyright notice, license notice, disclaimer notice, and a URI
-    or hyperlink to the original material.
-  description: Sharing the software with others
-  title: Distribution
+  conditions: The distribution must be for non-commercial purposes and the Licensed
+    Material must be reproduced and shared in whole or in part with proper attribution.
+  description: The user is allowed to distribute the Licensed Material.
+  title: Distribution of the Licensed Material
 - allowed: false
-  conditions: The license is non-sublicensable, meaning the software cannot be sublicensed
-    to a third party.
-  description: Granting rights in the software to a third party
-  title: Sublicensing
+  conditions: Not applicable as this is not allowed.
+  description: The user is allowed to sublicense the Licensed Material.
+  title: Sublicensing of the Licensed Material
+- allowed: true
+  conditions: The Adapted Material must not be shared and must be for non-commercial
+    purposes.
+  description: The user is allowed to use the Adapted Material.
+  title: Use of Adapted Material
+- allowed: true
+  conditions: The circumvention must be necessary to exercise the Licensed Rights.
+  description: The user is allowed to circumvent Effective Technological Measures.
+  title: Circumvention of Effective Technological Measures
+- allowed: true
+  conditions: The use must fall under fair use, fair dealing, or any other exception
+    or limitation to Copyright and Similar Rights.
+  description: The user is allowed to use the Licensed Material with Exceptions and
+    Limitations.
+  title: Use of the Licensed Material with Exceptions and Limitations
+- allowed: true
+  conditions: The use must comply with the conditions in Section 3(a) if a substantial
+    portion of the database contents is shared.
+  description: The user is allowed to use the Licensed Material in a database.
+  title: Use of the Licensed Material in a Database
 - allowed: false
-  conditions: Patent and trademark rights are not licensed under this Public License.
-  description: Using the software in a way that involves patent and trademark rights
-  title: Use with Patent and Trademark Rights
+  conditions: Not applicable as Patent and Trademark Rights are not licensed under
+    this Public License.
+  description: The user is allowed to use the Licensed Material with Patent and Trademark
+    Rights.
+  title: Use of the Licensed Material with Patent and Trademark Rights
 - allowed: true
-  conditions: Moral rights are not licensed under this Public License, but the Licensor
-    waives and/or agrees not to assert any such rights held by the Licensor to the
-    limited extent necessary to allow You to exercise the Licensed Rights.
-  description: Using the software in a way that involves moral rights, such as the
-    right of integrity
-  title: Use with Moral Rights
+  conditions: The public performance must be for non-commercial purposes.
+  description: The user is allowed to use the Licensed Material for public performance.
+  title: Use of the Licensed Material for Public Performance
 - allowed: true
-  conditions: If the Licensed Rights include Sui Generis Database Rights, You can
-    extract, reuse, reproduce, and Share all or a substantial portion of the contents
-    of the database for NonCommercial purposes only and provided You do not Share
-    Adapted Material.
-  description: Using the software in a way that involves Sui Generis Database Rights
-  title: Use with Sui Generis Database Rights
-- allowed: true
-  conditions: These rights are not licensed under this Public License, but the Licensor
-    waives and/or agrees not to assert any such rights held by the Licensor to the
-    limited extent necessary to allow You to exercise the Licensed Rights.
-  description: Using the software in a way that involves publicity, privacy, and/or
-    other similar personality rights
-  title: Use with Publicity, Privacy, and/or Other Similar Personality Rights
-- allowed: true
-  conditions: To the extent possible, the Licensor waives any right to collect royalties
-    from You for the exercise of the Licensed Rights, whether directly or through
-    a collecting society under any voluntary or waivable statutory or compulsory licensing
-    scheme.
-  description: Using the software in a way that involves royalties
-  title: Use with Royalties
+  conditions: The use must be to the extent possible, with the Licensor waiving and/or
+    agreeing not to assert any such rights held by the Licensor to the limited extent
+    necessary to allow the exercise of the Licensed Rights.
+  description: The user is allowed to use the Licensed Material with Moral Rights.
+  title: Use of the Licensed Material with Moral Rights
