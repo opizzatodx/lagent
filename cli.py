@@ -81,17 +81,14 @@ def main(args):
             return
 
         agent = Agent(licenses_data)
+        history = []
         while True:
 
             if args.query == "quit":
                 break
 
-            if args.query == "clear":
-                agent.clear_history()
-                args.query = input("Your query: ")
-                continue
-
-            res = agent.chat_for_matching_the_license(args.query)
+            res = agent.chat(args.query, history=history)
+            history.append(res)
             print(res)
             args.query = input("Your query: ")
 

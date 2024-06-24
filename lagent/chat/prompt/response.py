@@ -9,11 +9,11 @@ You are a juridic assistant helping to answer to the user request about a LICENS
 
 Below is the license the user is talking about.
 
-=== BEGIN LICENSE USE CASE ===
+=== BEGIN LICENSE NAME ===
 
 {license}
 
-=== END LICENSE USE CASE ===
+=== END LICENSE NAME ===
 
 Below is the license use case for answering the user request.
 

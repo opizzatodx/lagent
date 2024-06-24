@@ -4,5 +4,7 @@ gradio==4.36.1
 langchain-community==0.0.38
 langchain-core==0.1.52
 langchain-nvidia-ai-endpoints==0.1.2
+langgraph==0.0.51
 nemoguardrails==0.9.0
 pydantic==2.7.4
+grandalf==0.8

@@ -41,6 +41,7 @@ L'Agent is preloaded with 32 open-source software licenses for demonstration pur
   * LLM [mixtral-8x22b-instruct](https://build.nvidia.com/mistralai/mixtral-8x22b-instruct) for cross-validation of L'Agent answer
 * [NVIDIA NEMO Guardrails](https://docs.nvidia.com/nemo/guardrails/index.html) for L'Agent output rail implementation
 * [LangChain](https://www.langchain.com/langchain) as generative AI framework 
+* [LangGraph](https://langchain-ai.github.io/langgraph/) for creating the multi-agent workflow
 * [LangSmith](https://www.langchain.com/langsmith) for generative AI monitoring
 * [Gradio](https://www.gradio.app/) as user interface 
         
@@ -54,22 +55,24 @@ The use case generation is a LangChain chain with:
 
 ## Chat engine
 
-The chat engine is a composition of 3 successive chats:
+The chat engine is a composition of 3 successive chats build with [LangGraph](https://langchain-ai.github.io/langgraph/):
+
+![L'Agent workflow](./assets/images/workflow.png)
 
 Each one is
 * a [RunnableWithMessageHistory](https://python.langchain.com/v0.2/docs/how_to/message_history/) chain with
 * a NVIDIA Chat LLM model using [```langchain-nvidia-ai-endpoints```](https://python.langchain.com/v0.2/docs/integrations/providers/nvidia/).
 
-*LICENSE* chat
+*match_the_license*
   * aims at identifying what is the exact license the user is talking about,
   * using a 3-shots CoT [ChatPromptTemplate]() with the list of license names as parameter.
 
-*USE_CASE* chat
+*match_the_use_case*
   * aims at identifying which use case from the use case database the user is talking about,
   * using a 2-shots CoT [ChatPromptTemplate]() with the list of the license use cases as parameter.
   * The LLM answer is prefixed with the name of the license that was identified by the *LICENSE* chat.
 
-*RESPONSE* chat
+*give_answer*
   * aims at providing the final answer to the user,
   * using a 2-shots CoT [ChatPromptTemplate]() with the name of the license and the use case as parameters.
   * The LLM answer is prefixed with the name of the license and the use case that was identified in by the *LICENSE* and *USE_CASE* chats.
